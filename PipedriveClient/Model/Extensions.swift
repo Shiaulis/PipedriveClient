@@ -18,3 +18,12 @@ extension OSLog {
         self.init(subsystem: subsystem.rawValue, category: String(describing: object))
     }
 }
+
+extension Error {
+    var failureReason: String {
+        if let localizedError = self as? LocalizedError {
+            return localizedError.failureReason
+        }
+        return ""
+    }
+}

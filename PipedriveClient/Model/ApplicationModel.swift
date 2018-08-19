@@ -28,7 +28,8 @@ class ApplicationModel {
         } catch  {
             self.persistentDataManager = nil
             self.persistentDataManagerError = error
-            os_log("Failed to initiate persistent storage. Error: '%@'", log: ApplicationModel.logger, type: .error, error.localizedDescription)
+            os_log("Failed to initiate persistent storage. Error: '%@'. Reason: '%@'.", log: ApplicationModel.logger, type: .error, error.localizedDescription, error.failureReason)
+            assertionFailure()
         }
     }
 
@@ -37,6 +38,12 @@ class ApplicationModel {
     }
 
     func saveDataInPersistentStorage() {
-        persistentDataManager?.saveContext()
+        do {
+            try persistentDataManager?.saveContext()
+        } catch {
+            os_log("Failed to save data to persistent storage. Error: '%@'. Reason: '%@'.", log: ApplicationModel.logger, type: .error, error.localizedDescription, error.failureReason)
+            assertionFailure()
+        }
+
     }
 }

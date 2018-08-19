@@ -9,24 +9,26 @@
 import Foundation
 
 enum PersistentDataManagerError: Error {
-    case loadPersistentStoresFailed(withError: Error?)
+    case loadStoresFailed(error: Error?)
+    case saveContextFailed(error: Error?)
 }
 
 extension PersistentDataManagerError: LocalizedError {
     var errorDescription: String? {
         switch self {
-        case .loadPersistentStoresFailed(withError: _):
+        case .loadStoresFailed(error: _):
             return NSLocalizedString("Failed to load persistent storage", comment: "error description")
+        case .saveContextFailed(error: _):
+            return NSLocalizedString("Failed save data to persistent storage", comment: "error description")
         }
     }
 
     var failureReason: String? {
         switch self {
-        case .loadPersistentStoresFailed(withError: let error):
-            if let error = error {
-                return error.localizedDescription
-            }
-            return nil
+        case .loadStoresFailed(let error):
+            return error?.localizedDescription ?? nil
+        case .saveContextFailed(let error):
+            return error?.localizedDescription ?? nil
         }
     }
 }
