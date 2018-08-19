@@ -19,6 +19,8 @@
 		09E1F35A21297F190049988C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F35921297F190049988C /* Contact.swift */; };
 		09E1F35C21297F2D0049988C /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F35B21297F2D0049988C /* Organization.swift */; };
 		09E1F35E212982240049988C /* PersistentDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F35D212982240049988C /* PersistentDataManager.swift */; };
+		09E1F36021298E380049988C /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F35F21298E380049988C /* Errors.swift */; };
+		09E1F362212991FF0049988C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F361212991FF0049988C /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		09E1F35921297F190049988C /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		09E1F35B21297F2D0049988C /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		09E1F35D212982240049988C /* PersistentDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentDataManager.swift; sourceTree = "<group>"; };
+		09E1F35F21298E380049988C /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		09E1F361212991FF0049988C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +145,11 @@
 				09E1F354212962700049988C /* ApplicationModel.swift */,
 				09E1F35721297EC30049988C /* Person.swift */,
 				09E1F35921297F190049988C /* Contact.swift */,
-				09E1F32A212937230049988C /* PipedriveClient.xcdatamodeld */,
 				09E1F35B21297F2D0049988C /* Organization.swift */,
 				09E1F35D212982240049988C /* PersistentDataManager.swift */,
+				09E1F32A212937230049988C /* PipedriveClient.xcdatamodeld */,
+				09E1F35F21298E380049988C /* Errors.swift */,
+				09E1F361212991FF0049988C /* Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,8 +289,10 @@
 				09E1F326212937230049988C /* ViewController.swift in Sources */,
 				09E1F324212937230049988C /* AppDelegate.swift in Sources */,
 				09E1F35E212982240049988C /* PersistentDataManager.swift in Sources */,
+				09E1F362212991FF0049988C /* Extensions.swift in Sources */,
 				09E1F35C21297F2D0049988C /* Organization.swift in Sources */,
 				09E1F355212962700049988C /* ApplicationModel.swift in Sources */,
+				09E1F36021298E380049988C /* Errors.swift in Sources */,
 				09E1F32C212937230049988C /* PipedriveClient.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
