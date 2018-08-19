@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09E1F324212937230049988C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F323212937230049988C /* AppDelegate.swift */; };
+		09E1F326212937230049988C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F325212937230049988C /* ViewController.swift */; };
+		09E1F32C212937230049988C /* PipedriveClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F32A212937230049988C /* PipedriveClient.xcdatamodeld */; };
+		09E1F32E212937240049988C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E1F32D212937240049988C /* Assets.xcassets */; };
+		09E1F331212937240049988C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E1F32F212937240049988C /* LaunchScreen.storyboard */; };
+		09E1F33C212937240049988C /* PipedriveClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F33B212937240049988C /* PipedriveClientTests.swift */; };
+		09E1F347212937240049988C /* PipedriveClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F346212937240049988C /* PipedriveClientUITests.swift */; };
+		09E1F355212962700049988C /* ApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F354212962700049988C /* ApplicationModel.swift */; };
+		09E1F35821297EC30049988C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F35721297EC30049988C /* Person.swift */; };
+		09E1F35A21297F190049988C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F35921297F190049988C /* Contact.swift */; };
+		09E1F35C21297F2D0049988C /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F35B21297F2D0049988C /* Organization.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09E1F338212937240049988C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09E1F318212937230049988C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09E1F31F212937230049988C;
+			remoteInfo = PipedriveClient;
+		};
+		09E1F343212937240049988C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09E1F318212937230049988C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09E1F31F212937230049988C;
+			remoteInfo = PipedriveClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09E1F320212937230049988C /* PipedriveClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipedriveClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E1F323212937230049988C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		09E1F325212937230049988C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09E1F32B212937230049988C /* PipedriveClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PipedriveClient.xcdatamodel; sourceTree = "<group>"; };
+		09E1F32D212937240049988C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09E1F330212937240049988C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09E1F332212937240049988C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E1F337212937240049988C /* PipedriveClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PipedriveClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E1F33B212937240049988C /* PipedriveClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipedriveClientTests.swift; sourceTree = "<group>"; };
+		09E1F33D212937240049988C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E1F342212937240049988C /* PipedriveClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PipedriveClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E1F346212937240049988C /* PipedriveClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipedriveClientUITests.swift; sourceTree = "<group>"; };
+		09E1F348212937240049988C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E1F354212962700049988C /* ApplicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationModel.swift; sourceTree = "<group>"; };
+		09E1F35721297EC30049988C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		09E1F35921297F190049988C /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		09E1F35B21297F2D0049988C /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09E1F31D212937230049988C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E1F334212937240049988C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E1F33F212937240049988C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09E1F317212937230049988C = {
+			isa = PBXGroup;
+			children = (
+				09E1F322212937230049988C /* PipedriveClient */,
+				09E1F33A212937240049988C /* PipedriveClientTests */,
+				09E1F345212937240049988C /* PipedriveClientUITests */,
+				09E1F321212937230049988C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		09E1F321212937230049988C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09E1F320212937230049988C /* PipedriveClient.app */,
+				09E1F337212937240049988C /* PipedriveClientTests.xctest */,
+				09E1F342212937240049988C /* PipedriveClientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09E1F322212937230049988C /* PipedriveClient */ = {
+			isa = PBXGroup;
+			children = (
+				09E1F323212937230049988C /* AppDelegate.swift */,
+				09E1F35621297E8D0049988C /* Model */,
+				09E1F325212937230049988C /* ViewController.swift */,
+				09E1F32D212937240049988C /* Assets.xcassets */,
+				09E1F32F212937240049988C /* LaunchScreen.storyboard */,
+				09E1F332212937240049988C /* Info.plist */,
+			);
+			path = PipedriveClient;
+			sourceTree = "<group>";
+		};
+		09E1F33A212937240049988C /* PipedriveClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				09E1F33B212937240049988C /* PipedriveClientTests.swift */,
+				09E1F33D212937240049988C /* Info.plist */,
+			);
+			path = PipedriveClientTests;
+			sourceTree = "<group>";
+		};
+		09E1F345212937240049988C /* PipedriveClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				09E1F346212937240049988C /* PipedriveClientUITests.swift */,
+				09E1F348212937240049988C /* Info.plist */,
+			);
+			path = PipedriveClientUITests;
+			sourceTree = "<group>";
+		};
+		09E1F35621297E8D0049988C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				09E1F354212962700049988C /* ApplicationModel.swift */,
+				09E1F35721297EC30049988C /* Person.swift */,
+				09E1F35921297F190049988C /* Contact.swift */,
+				09E1F32A212937230049988C /* PipedriveClient.xcdatamodeld */,
+				09E1F35B21297F2D0049988C /* Organization.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09E1F31F212937230049988C /* PipedriveClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09E1F34B212937240049988C /* Build configuration list for PBXNativeTarget "PipedriveClient" */;
+			buildPhases = (
+				09E1F31C212937230049988C /* Sources */,
+				09E1F31D212937230049988C /* Frameworks */,
+				09E1F31E212937230049988C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PipedriveClient;
+			productName = PipedriveClient;
+			productReference = 09E1F320212937230049988C /* PipedriveClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		09E1F336212937240049988C /* PipedriveClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09E1F34E212937240049988C /* Build configuration list for PBXNativeTarget "PipedriveClientTests" */;
+			buildPhases = (
+				09E1F333212937240049988C /* Sources */,
+				09E1F334212937240049988C /* Frameworks */,
+				09E1F335212937240049988C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09E1F339212937240049988C /* PBXTargetDependency */,
+			);
+			name = PipedriveClientTests;
+			productName = PipedriveClientTests;
+			productReference = 09E1F337212937240049988C /* PipedriveClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		09E1F341212937240049988C /* PipedriveClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09E1F351212937240049988C /* Build configuration list for PBXNativeTarget "PipedriveClientUITests" */;
+			buildPhases = (
+				09E1F33E212937240049988C /* Sources */,
+				09E1F33F212937240049988C /* Frameworks */,
+				09E1F340212937240049988C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09E1F344212937240049988C /* PBXTargetDependency */,
+			);
+			name = PipedriveClientUITests;
+			productName = PipedriveClientUITests;
+			productReference = 09E1F342212937240049988C /* PipedriveClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09E1F318212937230049988C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Andrius Shiaulis";
+				TargetAttributes = {
+					09E1F31F212937230049988C = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					09E1F336212937240049988C = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 09E1F31F212937230049988C;
+					};
+					09E1F341212937240049988C = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 09E1F31F212937230049988C;
+					};
+				};
+			};
+			buildConfigurationList = 09E1F31B212937230049988C /* Build configuration list for PBXProject "PipedriveClient" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09E1F317212937230049988C;
+			productRefGroup = 09E1F321212937230049988C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09E1F31F212937230049988C /* PipedriveClient */,
+				09E1F336212937240049988C /* PipedriveClientTests */,
+				09E1F341212937240049988C /* PipedriveClientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09E1F31E212937230049988C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E1F331212937240049988C /* LaunchScreen.storyboard in Resources */,
+				09E1F32E212937240049988C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E1F335212937240049988C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E1F340212937240049988C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09E1F31C212937230049988C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E1F35A21297F190049988C /* Contact.swift in Sources */,
+				09E1F35821297EC30049988C /* Person.swift in Sources */,
+				09E1F326212937230049988C /* ViewController.swift in Sources */,
+				09E1F324212937230049988C /* AppDelegate.swift in Sources */,
+				09E1F35C21297F2D0049988C /* Organization.swift in Sources */,
+				09E1F355212962700049988C /* ApplicationModel.swift in Sources */,
+				09E1F32C212937230049988C /* PipedriveClient.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E1F333212937240049988C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E1F33C212937240049988C /* PipedriveClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E1F33E212937240049988C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E1F347212937240049988C /* PipedriveClientUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09E1F339212937240049988C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09E1F31F212937230049988C /* PipedriveClient */;
+			targetProxy = 09E1F338212937240049988C /* PBXContainerItemProxy */;
+		};
+		09E1F344212937240049988C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09E1F31F212937230049988C /* PipedriveClient */;
+			targetProxy = 09E1F343212937240049988C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		09E1F32F212937240049988C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09E1F330212937240049988C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09E1F349212937240049988C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		09E1F34A212937240049988C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09E1F34C212937240049988C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NFA8F38A32;
+				INFOPLIST_FILE = PipedriveClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shiaulis.PipedriveClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		09E1F34D212937240049988C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NFA8F38A32;
+				INFOPLIST_FILE = PipedriveClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shiaulis.PipedriveClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		09E1F34F212937240049988C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NFA8F38A32;
+				INFOPLIST_FILE = PipedriveClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shiaulis.PipedriveClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PipedriveClient.app/PipedriveClient";
+			};
+			name = Debug;
+		};
+		09E1F350212937240049988C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NFA8F38A32;
+				INFOPLIST_FILE = PipedriveClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shiaulis.PipedriveClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PipedriveClient.app/PipedriveClient";
+			};
+			name = Release;
+		};
+		09E1F352212937240049988C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NFA8F38A32;
+				INFOPLIST_FILE = PipedriveClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shiaulis.PipedriveClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PipedriveClient;
+			};
+			name = Debug;
+		};
+		09E1F353212937240049988C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NFA8F38A32;
+				INFOPLIST_FILE = PipedriveClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shiaulis.PipedriveClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PipedriveClient;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09E1F31B212937230049988C /* Build configuration list for PBXProject "PipedriveClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E1F349212937240049988C /* Debug */,
+				09E1F34A212937240049988C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09E1F34B212937240049988C /* Build configuration list for PBXNativeTarget "PipedriveClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E1F34C212937240049988C /* Debug */,
+				09E1F34D212937240049988C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09E1F34E212937240049988C /* Build configuration list for PBXNativeTarget "PipedriveClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E1F34F212937240049988C /* Debug */,
+				09E1F350212937240049988C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09E1F351212937240049988C /* Build configuration list for PBXNativeTarget "PipedriveClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E1F352212937240049988C /* Debug */,
+				09E1F353212937240049988C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		09E1F32A212937230049988C /* PipedriveClient.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				09E1F32B212937230049988C /* PipedriveClient.xcdatamodel */,
+			);
+			currentVersion = 09E1F32B212937230049988C /* PipedriveClient.xcdatamodel */;
+			path = PipedriveClient.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 09E1F318212937230049988C /* Project object */;
+}
