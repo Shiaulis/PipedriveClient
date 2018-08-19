@@ -7,17 +7,29 @@
 //
 
 import Foundation
+import os.log
 
 class ApplicationModel {
 
     // MARK: - Properties -
+    static private let logger = OSLog.init(subsystem: LogSubsystem.applicationModel, object: ApplicationModel.self)
 
-    private let persistenDataManager: PersistentDataManager
+
+    private let persistentDataManager: PersistentDataManager?
+    private let persistentDataManagerError: Error?
 
     // MARK: - Initialization -
 
     init() {
-        self.persistenDataManager = PersistentDataManager()
+        do {
+            try self.persistentDataManager = PersistentDataManager()
+            self.persistentDataManagerError = nil
+            os_log("Persistent storage initiated successfully", log: ApplicationModel.logger, type: .debug)
+        } catch  {
+            self.persistentDataManager = nil
+            self.persistentDataManagerError = error
+            os_log("Failed to initiate persistent storage. Error: '%@'", log: ApplicationModel.logger, type: .error, error.localizedDescription)
+        }
     }
 
     func setup() {
@@ -25,6 +37,6 @@ class ApplicationModel {
     }
 
     func saveDataInPersistentStorage() {
-        persistenDataManager.saveContext()
+        persistentDataManager?.saveContext()
     }
 }
