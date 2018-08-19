@@ -12,10 +12,19 @@ class ApplicationModel {
 
     // MARK: - Properties -
 
+    private let persistenDataManager: PersistentDataManager
+
     // MARK: - Initialization -
 
     init() {
-        
+        self.persistenDataManager = PersistentDataManager()
     }
-    
+
+    func setup() {
+
+    }
+
+    func saveDataInPersistentStorage() {
+        persistenDataManager.saveContext()
+    }
 }
