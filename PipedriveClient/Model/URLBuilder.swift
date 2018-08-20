@@ -12,14 +12,14 @@ class URLBuilder {
 
     private let urlBuilderScheme: URLBuilderScheme
 
-    init(using scheme: URLBuilderScheme = URLBuilderScheme.defaultScheme) {
+    init(using scheme: URLBuilderScheme) {
         self.urlBuilderScheme = scheme
     }
 
-    func buildURL() -> URL? {
+    var url : URL? {
         var urlComponents = URLComponents()
-        urlComponents.scheme = "https://"
-        urlComponents.host = "pipedrive.com"
+        urlComponents.scheme = "https"
+        urlComponents.host = "\(urlBuilderScheme.companyName).pipedrive.com"
         urlComponents.path = urlBuilderScheme.endpoint.path
 
         urlComponents.queryItems = urlBuilderScheme.pagination.queryItems
@@ -30,13 +30,15 @@ class URLBuilder {
 }
 
 struct URLBuilderScheme {
+    let companyName: String
     let endpoint: Endpoint
     let pagination: Pagination
     let apiToken: ApiToken
 
-    static let defaultScheme = URLBuilderScheme.init(endpoint: Endpoint.person,
-                                                     pagination: Pagination.defaultPagination,
-                                                     apiToken: ApiToken.current)
+//    static let defaultScheme = URLBuilderScheme.init(companyName: "andriusinc",
+//                                                     endpoint: Endpoint.person,
+//                                                     pagination: Pagination.defaultPagination,
+//                                                     apiToken: ApiToken.current)
 }
 
 enum Endpoint {
@@ -53,7 +55,7 @@ enum Endpoint {
 struct Pagination {
     private let startQueryItem: URLQueryItem
     private let limitQueryItem: URLQueryItem?
-    static let defaultPagination = Pagination.init(start: 1)
+    static let defaultPagination = Pagination.init(start: 0)
 
     init(start: UInt, limit: UInt = 0) {
         self.startQueryItem = URLQueryItem.init(name: "start", value: String(start))
@@ -82,5 +84,3 @@ enum ApiToken {
         }
     }
 }
-
-
