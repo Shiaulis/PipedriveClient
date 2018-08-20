@@ -12,8 +12,8 @@ class URLBuilder {
 
     private let urlBuilderScheme: URLBuilderScheme
 
-    init(using scheme: URLBuilderScheme? = nil) {
-        self.urlBuilderScheme = scheme ?? URLBuilderScheme.defaultScheme
+    init(using scheme: URLBuilderScheme = URLBuilderScheme.defaultScheme) {
+        self.urlBuilderScheme = scheme
     }
 
     func buildURL() -> URL? {
