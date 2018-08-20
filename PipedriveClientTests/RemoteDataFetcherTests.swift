@@ -79,7 +79,7 @@ private class TestNetworkProvider: NetworkProvider {
         self.error = error
     }
 
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
+    func performDataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         if url.path.count == 0 {
             completionHandler(nil, nil, nil)
             return
