@@ -13,6 +13,7 @@ class RemoteDataFetcherTests: XCTestCase {
 
     static private let testData = Data(repeating: 1, count: 10)
     static private let testURL = URL.init(string: "http://test.com")
+    static private let testError = NSError.init(domain: "testDomain", code: 1, userInfo: nil)
 
     func testFetcher_notNilData() {
         let testNetworkProvider = TestNetworkProvider.init(data: RemoteDataFetcherTests.testData,
@@ -34,6 +35,34 @@ class RemoteDataFetcherTests: XCTestCase {
             case .failure(let error):
                 XCTAssertNil(error)
                 XCTFail()
+            }
+        }
+    }
+
+    func testFetcher_nilDataNotNilError() {
+        let testNetworkProvider = TestNetworkProvider.init(data: nil,
+                                                           response: nil,
+                                                           error: RemoteDataFetcherTests.testError)
+        let remoteDataFetcher = RemoteDataFetcher.init(using: DispatchQueue.global(qos: .userInitiated), networkProvider: testNetworkProvider)
+
+        guard let testURL = RemoteDataFetcherTests.testURL else {
+            XCTAssertNil(RemoteDataFetcherTests.testURL)
+            return
+        }
+
+        remoteDataFetcher.performRequest(using: testURL) { (result) in
+            XCTAssertFalse(Thread.isMainThread)
+            switch result {
+            case .success(_):
+                XCTFail()
+
+            case .failure(let error):
+
+                guard let receivedError = error else {
+                    XCTAssertNotNil(error)
+                    return
+                }
+                XCTAssertEqual(receivedError as NSError, RemoteDataFetcherTests.testError)
             }
         }
     }
