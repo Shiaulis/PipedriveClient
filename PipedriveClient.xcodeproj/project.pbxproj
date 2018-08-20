@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		09A011732129EA7E003EBD5B /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* URLBuilder.swift */; };
 		09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */; };
+		09DD4740212A5CE2005C1546 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* URLBuilder.swift */; };
 		09E1F324212937230049988C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F323212937230049988C /* AppDelegate.swift */; };
 		09E1F326212937230049988C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F325212937230049988C /* ViewController.swift */; };
 		09E1F32C212937230049988C /* PipedriveClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F32A212937230049988C /* PipedriveClient.xcdatamodeld */; };
@@ -310,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E1F33C212937240049988C /* URLBuilderTests.swift in Sources */,
+				09DD4740212A5CE2005C1546 /* URLBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
