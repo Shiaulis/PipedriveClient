@@ -8,37 +8,45 @@
 
 import Foundation
 
-class URLBuilder {
+class RequestBuilder {
 
-    private let urlBuilderScheme: URLBuilderScheme
+    private let baseURL: URL
+    private let apiTokenQueryItem: URLQueryItem
 
-    init(using scheme: URLBuilderScheme) {
-        self.urlBuilderScheme = scheme
+    init?(usingURLScheme urlScheme: String, companyName: String, apiVersion: String, token: String) {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = urlScheme
+        urlComponents.host = "\(companyName).pipedrive.com"
+        urlComponents.path = "/\(apiVersion)"
+
+        guard let url = urlComponents.url else {
+            assertionFailure()
+            return nil
+        }
+        self.baseURL = url
+        self.apiTokenQueryItem = URLQueryItem.init(name: "api_token", value: token)
     }
 
-    var url : URL? {
-        var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "\(urlBuilderScheme.companyName).pipedrive.com"
-        urlComponents.path = urlBuilderScheme.endpoint.path
+    func createURL(for endpoint: Endpoint, pagination: Pagination = Pagination.defaultPagination, otherQueryItems:[URLQueryItem]? = nil) -> URL? {
+        guard let endpointURL = URL.init(string: endpoint.path, relativeTo: baseURL) else {
+            assertionFailure()
+            return nil
+        }
 
-        urlComponents.queryItems = urlBuilderScheme.pagination.queryItems
-        urlComponents.queryItems?.append(urlBuilderScheme.apiToken.queryItem)
+        guard var urlComponents = URLComponents.init(url: endpointURL, resolvingAgainstBaseURL: true) else {
+            assertionFailure()
+            return nil
+        }
+
+        var queryItems = pagination.queryItems
+        if let otherQueryItems = otherQueryItems {
+            queryItems.append(contentsOf: otherQueryItems)
+        }
+        queryItems.append(apiTokenQueryItem)
+        urlComponents.queryItems = queryItems
 
         return urlComponents.url
     }
-}
-
-struct URLBuilderScheme {
-    let companyName: String
-    let endpoint: Endpoint
-    let pagination: Pagination
-    let apiToken: ApiToken
-
-//    static let defaultScheme = URLBuilderScheme.init(companyName: "andriusinc",
-//                                                     endpoint: Endpoint.person,
-//                                                     pagination: Pagination.defaultPagination,
-//                                                     apiToken: ApiToken.current)
 }
 
 enum Endpoint {
