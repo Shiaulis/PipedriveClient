@@ -28,7 +28,7 @@ class RemoteDataFetcher {
     func performRequest(using url: URL, completionHandler: @escaping (RemoteRequestResult) -> Void) {
         queue.async { [weak self] in
             os_log("Request for data at url '%@' started.", log: RemoteDataFetcher.logger, type: .debug, url.absoluteString)
-            self?.networkProvider.dataTask(with: url, completionHandler: { (data, response, error) in
+            self?.networkProvider.performDataTask(with: url, completionHandler: { (data, response, error) in
                 if let error = error {
                     os_log("Failed to perform request for URL '%@'. Error: '%@'. Response: '%@'",
                            log: RemoteDataFetcher.logger,
@@ -64,5 +64,25 @@ class RemoteDataFetcher {
  Protocol encapsulates URLSession and provide an ability to test RemoteDataFetcher
  */
 protocol NetworkProvider {
-    func dataTask(with: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void)
+    func performDataTask(with: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void)
+}
+
+class URLSessionBasedNetworkProvider: NetworkProvider {
+
+    // MARK: - Properties -
+
+    private let urlSession: URLSession
+
+    // MARK: - Initialization -
+
+    init() {
+        self.urlSession = URLSession.init(configuration: .default)
+    }
+
+    // MARK: - Network provider methods -
+
+    func performDataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        urlSession.dataTask(with: url, completionHandler: completionHandler).resume()
+    }
+
 }
