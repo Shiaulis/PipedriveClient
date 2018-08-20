@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - AppDelegate callbacks -
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        applicationModel.setup()
         return true
     }
 
