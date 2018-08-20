@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09180585212A7F09000B0B95 /* RemoteDataFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09180584212A7F09000B0B95 /* RemoteDataFetcherTests.swift */; };
 		09A011732129EA7E003EBD5B /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* URLBuilder.swift */; };
 		09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */; };
 		09DD4740212A5CE2005C1546 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* URLBuilder.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09180584212A7F09000B0B95 /* RemoteDataFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcherTests.swift; sourceTree = "<group>"; };
 		09A011722129EA7E003EBD5B /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcher.swift; sourceTree = "<group>"; };
 		09E1F320212937230049988C /* PipedriveClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipedriveClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +131,7 @@
 		09E1F33A212937240049988C /* PipedriveClientTests */ = {
 			isa = PBXGroup;
 			children = (
+				09180584212A7F09000B0B95 /* RemoteDataFetcherTests.swift */,
 				09E1F33B212937240049988C /* URLBuilderTests.swift */,
 				09E1F33D212937240049988C /* Info.plist */,
 			);
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E1F33C212937240049988C /* URLBuilderTests.swift in Sources */,
+				09180585212A7F09000B0B95 /* RemoteDataFetcherTests.swift in Sources */,
 				09DD4740212A5CE2005C1546 /* URLBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
