@@ -37,3 +37,13 @@ enum DataMapperError: Error {
     case incorrectJsonFormat
     case detectedErrorMessageInsideJson(errorMessage: String)
 }
+
+enum CacheStorageError: Error {
+    case cacheDataDoesntExist
+    case failedToReadDataFromFile
+    case failedToCreateCacheFile
+}
+
+enum SystemLocalFileManagerError: Error {
+    case failedToDetectSystemCacheDirectory
+}
