@@ -58,7 +58,13 @@ class ApplicationModel {
         }
 
         remoteDataFethcer.performRequest(using: url) { (result) in
-
+            switch result {
+            case .success(let data):
+                let mapper = DataMapper.init(queue: .global(qos: .userInteractive))
+                mapper.decodePersons(from: data)
+            case .failure(_):
+                assertionFailure()
+            }
         }
     }
 
