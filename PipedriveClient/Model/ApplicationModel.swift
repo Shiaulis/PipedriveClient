@@ -22,8 +22,11 @@ class ApplicationModel {
 
     private let requestBuilder: RequestBuilder?
     private let remoteDataFethcer: RemoteDataFetcher
+    private let dataMapper: DataMapper
     private let persistentDataManager: PersistentDataManager?
     private let persistentDataManagerError: Error?
+
+    private var personModelControllers:[PersonModelContoller]
 
     // MARK: - Initialization -
 
@@ -44,6 +47,8 @@ class ApplicationModel {
                                                   token: ApplicationModel.token)
         self.remoteDataFethcer = RemoteDataFetcher.init(using: DispatchQueue.global(qos: .userInteractive),
                                                         networkProvider: URLSessionBasedNetworkProvider())
+        self.dataMapper = DataMapper.init(queue: .global(qos: .userInteractive))
+        self.personModelControllers = []
     }
 
     func setup() {
@@ -57,14 +62,35 @@ class ApplicationModel {
             return
         }
 
-        remoteDataFethcer.performRequest(using: url) { (result) in
+        remoteDataFethcer.performRequest(using: url) { [weak self] (result) in
             switch result {
             case .success(let data):
-                let mapper = DataMapper.init(queue: .global(qos: .userInteractive))
-                mapper.decodePersons(from: data)
+                guard let strongSelf = self else {
+                    assertionFailure()
+                    return
+                }
+                strongSelf.decodePersons(from: data, completionHandler: { (personModelControllers) in
+                    if let personModelControllers = personModelControllers {
+                        strongSelf.personModelControllers = personModelControllers
+                    }
+                    else {
+                        os_log("Failed to get person model controllers for remote request.", log: ApplicationModel.logger, type: .error)
+                    }
+                })
             case .failure(_):
                 assertionFailure()
             }
+        }
+    }
+
+    func decodePersons(from data: Data, completionHandler:([PersonModelContoller]?) -> Void) {
+        do {
+            let personModelControllers = try dataMapper.decodePersons(from: data)
+            completionHandler(personModelControllers)
+        } catch  {
+            os_log("Failed to parse data", log: ApplicationModel.logger, type: .error)
+            assertionFailure()
+            completionHandler(nil)
         }
     }
 
