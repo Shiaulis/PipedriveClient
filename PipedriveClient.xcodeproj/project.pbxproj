@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		09180585212A7F09000B0B95 /* RemoteDataFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09180584212A7F09000B0B95 /* RemoteDataFetcherTests.swift */; };
 		09472850212BD142000E9CE4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0947284F212BD142000E9CE4 /* Person.swift */; };
+		09472852212BD1C6000E9CE4 /* PersonModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09472851212BD1C6000E9CE4 /* PersonModelController.swift */; };
 		0975F9FD212B2287002543CD /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975F9FC212B2287002543CD /* DataMapper.swift */; };
 		09A011732129EA7E003EBD5B /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* RequestBuilder.swift */; };
 		09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		09180584212A7F09000B0B95 /* RemoteDataFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcherTests.swift; sourceTree = "<group>"; };
 		0947284F212BD142000E9CE4 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		09472851212BD1C6000E9CE4 /* PersonModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModelController.swift; sourceTree = "<group>"; };
 		0975F9FC212B2287002543CD /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
 		09A011722129EA7E003EBD5B /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcher.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				09A011722129EA7E003EBD5B /* RequestBuilder.swift */,
 				0975F9FC212B2287002543CD /* DataMapper.swift */,
 				0947284F212BD142000E9CE4 /* Person.swift */,
+				09472851212BD1C6000E9CE4 /* PersonModelController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				09E1F355212962700049988C /* ApplicationModel.swift in Sources */,
 				09E1F36021298E380049988C /* Errors.swift in Sources */,
 				09A011732129EA7E003EBD5B /* RequestBuilder.swift in Sources */,
+				09472852212BD1C6000E9CE4 /* PersonModelController.swift in Sources */,
 				09472850212BD142000E9CE4 /* Person.swift in Sources */,
 				09E1F32C212937230049988C /* PipedriveClient.xcdatamodeld in Sources */,
 				09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */,
