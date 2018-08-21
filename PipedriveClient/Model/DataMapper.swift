@@ -28,9 +28,19 @@ class DataMapper {
         self.decoder = JSONDecoder.init()
     }
 
-    func decodePersons(from data: Data) {
-        let json = try? decoder.decode(PersonsListResponse.self, from: data)
-        dump(json)
+    func decodePersons(from data: Data) throws -> [PersonModelContoller] {
+
+        let json = try decoder.decode(PersonsListResponse.self, from: data)
+
+        if let errorInsideJson = json.error {
+            throw DataMapperError.detectedErrorMessageInsideJson(errorMessage: errorInsideJson)
+        }
+
+        guard let persons = json.responseData else {
+            throw DataMapperError.incorrectJsonFormat
+        }
+        
+        return persons.map( { PersonModelContoller(for: $0) } )
     }
 }
 
