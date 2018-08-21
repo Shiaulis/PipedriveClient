@@ -32,3 +32,8 @@ extension PersistentDataManagerError: LocalizedError {
         }
     }
 }
+
+enum DataMapperError: Error {
+    case incorrectJsonFormat
+    case detectedErrorMessageInsideJson(errorMessage: String)
+}
