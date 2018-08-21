@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09180585212A7F09000B0B95 /* RemoteDataFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09180584212A7F09000B0B95 /* RemoteDataFetcherTests.swift */; };
+		0975F9FD212B2287002543CD /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975F9FC212B2287002543CD /* DataMapper.swift */; };
 		09A011732129EA7E003EBD5B /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* RequestBuilder.swift */; };
 		09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */; };
 		09DD4740212A5CE2005C1546 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* RequestBuilder.swift */; };
@@ -19,7 +20,6 @@
 		09E1F33C212937240049988C /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F33B212937240049988C /* RequestBuilderTests.swift */; };
 		09E1F347212937240049988C /* PipedriveClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F346212937240049988C /* PipedriveClientUITests.swift */; };
 		09E1F355212962700049988C /* ApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F354212962700049988C /* ApplicationModel.swift */; };
-		09E1F35821297EC30049988C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F35721297EC30049988C /* Person.swift */; };
 		09E1F35A21297F190049988C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F35921297F190049988C /* Contact.swift */; };
 		09E1F35C21297F2D0049988C /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F35B21297F2D0049988C /* Organization.swift */; };
 		09E1F35E212982240049988C /* PersistentDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F35D212982240049988C /* PersistentDataManager.swift */; };
@@ -46,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		09180584212A7F09000B0B95 /* RemoteDataFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcherTests.swift; sourceTree = "<group>"; };
+		0975F9FC212B2287002543CD /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
 		09A011722129EA7E003EBD5B /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcher.swift; sourceTree = "<group>"; };
 		09E1F320212937230049988C /* PipedriveClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipedriveClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +63,6 @@
 		09E1F346212937240049988C /* PipedriveClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipedriveClientUITests.swift; sourceTree = "<group>"; };
 		09E1F348212937240049988C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E1F354212962700049988C /* ApplicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationModel.swift; sourceTree = "<group>"; };
-		09E1F35721297EC30049988C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		09E1F35921297F190049988C /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		09E1F35B21297F2D0049988C /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		09E1F35D212982240049988C /* PersistentDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentDataManager.swift; sourceTree = "<group>"; };
@@ -151,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				09E1F354212962700049988C /* ApplicationModel.swift */,
-				09E1F35721297EC30049988C /* Person.swift */,
 				09E1F35921297F190049988C /* Contact.swift */,
 				09E1F35B21297F2D0049988C /* Organization.swift */,
 				09E1F35D212982240049988C /* PersistentDataManager.swift */,
@@ -160,6 +159,7 @@
 				09E1F361212991FF0049988C /* Extensions.swift */,
 				09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */,
 				09A011722129EA7E003EBD5B /* RequestBuilder.swift */,
+				0975F9FC212B2287002543CD /* DataMapper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,8 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0975F9FD212B2287002543CD /* DataMapper.swift in Sources */,
 				09E1F35A21297F190049988C /* Contact.swift in Sources */,
-				09E1F35821297EC30049988C /* Person.swift in Sources */,
 				09E1F326212937230049988C /* ViewController.swift in Sources */,
 				09E1F324212937230049988C /* AppDelegate.swift in Sources */,
 				09E1F35E212982240049988C /* PersistentDataManager.swift in Sources */,
