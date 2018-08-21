@@ -39,7 +39,7 @@ class DataMapper {
         guard let persons = json.responseData else {
             throw DataMapperError.incorrectJsonFormat
         }
-        
+
         return persons.map( { PersonModelContoller(for: $0) } )
     }
 }
@@ -59,7 +59,7 @@ class DataMapper {
  }
  */
 
-struct PersonsListResponse: Decodable {
+private struct PersonsListResponse: Decodable {
     var success: Bool
     var responseData: [Person]?
     private var additionalData: AdditionalData?

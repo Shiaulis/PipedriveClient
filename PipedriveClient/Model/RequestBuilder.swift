@@ -10,8 +10,12 @@ import Foundation
 
 class RequestBuilder {
 
+    // MARK: - Properties -
+
     private let baseURL: URL
     private let apiTokenQueryItem: URLQueryItem
+
+    // MARK: - Initializaion -
 
     init?(usingURLScheme urlScheme: String, companyName: String, apiVersion: String, token: String) {
         var urlComponents = URLComponents()
@@ -26,6 +30,8 @@ class RequestBuilder {
         self.baseURL = url
         self.apiTokenQueryItem = URLQueryItem.init(name: "api_token", value: token)
     }
+
+    // MARK: - Public methods -
 
     func createURL(for endpoint: Endpoint, pagination: Pagination = Pagination.defaultPagination, otherQueryItems:[URLQueryItem]? = nil) -> URL? {
         guard let endpointURL = URL.init(string: endpoint.path, relativeTo: baseURL) else {
@@ -81,14 +87,5 @@ struct Pagination {
             queryItems.append(limitQueryItem)
         }
         return queryItems
-    }
-}
-
-enum ApiToken {
-    case current
-    var queryItem: URLQueryItem {
-        switch self {
-        case .current: return URLQueryItem.init(name: "api_token", value: "d95b2a784b544f23d9ccb4c3eae9b879c91225c1")
-        }
     }
 }

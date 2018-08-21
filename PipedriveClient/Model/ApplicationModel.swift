@@ -12,6 +12,7 @@ import os.log
 class ApplicationModel {
 
     // MARK: - Properties -
+    
     static private let urlScheme = "http"
     static private let apiVersion = "v1"
     // To check app in your own enviroment just paste

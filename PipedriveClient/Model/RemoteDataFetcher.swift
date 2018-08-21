@@ -16,14 +16,20 @@ enum RemoteRequestResult {
 
 class RemoteDataFetcher {
 
+    // MARK: - Properties -
+
     static private let logger = OSLog.init(subsystem: LogSubsystem.applicationModel, object: RemoteDataFetcher.self)
     private let queue: DispatchQueue
     private let networkProvider: NetworkProvider
+
+    // MARK: - Initialization -
 
     init(using queue:DispatchQueue, networkProvider: NetworkProvider) {
         self.queue = queue
         self.networkProvider = networkProvider
     }
+
+    // MARK: - Public methods -
 
     func performRequest(using url: URL, completionHandler: @escaping (RemoteRequestResult) -> Void) {
         queue.async { [weak self] in
@@ -55,7 +61,6 @@ class RemoteDataFetcher {
                 let result = RemoteRequestResult.success(receivedData)
                 completionHandler(result)
             })
-
         }
     }
 }
