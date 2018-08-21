@@ -52,8 +52,8 @@ class DataMapper {
 struct PersonsListResponse: Decodable {
     var success: Bool
     var responseData: [Person]?
-    var additionalData: AdditionalData?
-    var relatedObjects: RelatedObjects?
+    private var additionalData: AdditionalData?
+    private var relatedObjects: RelatedObjects?
     var error: String?
     var errorInfo: String?
 
@@ -67,41 +67,8 @@ struct PersonsListResponse: Decodable {
     }
 }
 
-struct Person: Decodable {
-    let id: Int?
-    let companyID: Int?
-    let sentEmailsCount: Int?
-    let name: String?
-    let firstName: String?
-    let secondName: String?
-    let phone: [ContactCard]?
-    let email: [ContactCard]?
-    let lastUpdated: String?
-    let organizationName: String?
-    enum CodingKeys: String, CodingKey {
-        case id
-        case companyID = "company_id"
-        case sentEmailsCount = "email_messages_count"
-        case name
-        case firstName = "first_name"
-        case secondName = "last_name"
-        case phone
-        case email
-        case lastUpdated = "update_time"
-        case organizationName = "org_name"
-    }
-}
 
-struct AdditionalData: Decodable {
 
-}
+private struct AdditionalData: Decodable { }
 
-struct RelatedObjects: Decodable {
-    
-}
-
-struct ContactCard: Decodable {
-    let label: String?
-    let value: String?
-    let primary: Bool?
-}
+private struct RelatedObjects: Decodable { }
