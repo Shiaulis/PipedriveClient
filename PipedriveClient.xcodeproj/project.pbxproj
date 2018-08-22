@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0911A05F212C9BE200D4C063 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911A05E212C9BE200D4C063 /* LocalFileManager.swift */; };
+		0911A061212CA11100D4C063 /* CacheStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911A060212CA11100D4C063 /* CacheStorageTests.swift */; };
+		0911A063212D205D00D4C063 /* TestFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911A062212D205D00D4C063 /* TestFileManager.swift */; };
+		0911A068212D20F300D4C063 /* TestNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911A067212D20F300D4C063 /* TestNetworkProvider.swift */; };
 		09180585212A7F09000B0B95 /* RemoteDataFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09180584212A7F09000B0B95 /* RemoteDataFetcherTests.swift */; };
 		093F6E51212C4E4900B6AB68 /* CacheStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093F6E50212C4E4900B6AB68 /* CacheStorage.swift */; };
 		09472850212BD142000E9CE4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0947284F212BD142000E9CE4 /* Person.swift */; };
@@ -48,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 		0911A05E212C9BE200D4C063 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
+		0911A060212CA11100D4C063 /* CacheStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheStorageTests.swift; sourceTree = "<group>"; };
+		0911A062212D205D00D4C063 /* TestFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFileManager.swift; sourceTree = "<group>"; };
+		0911A067212D20F300D4C063 /* TestNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkProvider.swift; sourceTree = "<group>"; };
 		09180584212A7F09000B0B95 /* RemoteDataFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcherTests.swift; sourceTree = "<group>"; };
 		093F6E50212C4E4900B6AB68 /* CacheStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheStorage.swift; sourceTree = "<group>"; };
 		0947284F212BD142000E9CE4 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -99,6 +105,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0911A065212D20CC00D4C063 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				09180584212A7F09000B0B95 /* RemoteDataFetcherTests.swift */,
+				09E1F33B212937240049988C /* RequestBuilderTests.swift */,
+				0911A060212CA11100D4C063 /* CacheStorageTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		0911A066212D20DC00D4C063 /* Helper classes */ = {
+			isa = PBXGroup;
+			children = (
+				0911A062212D205D00D4C063 /* TestFileManager.swift */,
+				0911A067212D20F300D4C063 /* TestNetworkProvider.swift */,
+			);
+			path = "Helper classes";
+			sourceTree = "<group>";
+		};
 		09E1F317212937230049988C = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +160,8 @@
 		09E1F33A212937240049988C /* PipedriveClientTests */ = {
 			isa = PBXGroup;
 			children = (
-				09180584212A7F09000B0B95 /* RemoteDataFetcherTests.swift */,
-				09E1F33B212937240049988C /* RequestBuilderTests.swift */,
+				0911A065212D20CC00D4C063 /* Tests */,
+				0911A066212D20DC00D4C063 /* Helper classes */,
 				09E1F33D212937240049988C /* Info.plist */,
 			);
 			path = PipedriveClientTests;
@@ -322,7 +347,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E1F33C212937240049988C /* RequestBuilderTests.swift in Sources */,
+				0911A068212D20F300D4C063 /* TestNetworkProvider.swift in Sources */,
 				09180585212A7F09000B0B95 /* RemoteDataFetcherTests.swift in Sources */,
+				0911A061212CA11100D4C063 /* CacheStorageTests.swift in Sources */,
+				0911A063212D205D00D4C063 /* TestFileManager.swift in Sources */,
 				09DD4740212A5CE2005C1546 /* RequestBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
