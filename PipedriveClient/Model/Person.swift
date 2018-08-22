@@ -19,6 +19,7 @@ struct Person: Decodable {
     let email: [ContactCard]?
     let lastUpdated: String?
     let organizationName: String?
+    
     enum CodingKeys: String, CodingKey {
         case id
         case companyID = "company_id"
@@ -32,10 +33,3 @@ struct Person: Decodable {
         case organizationName = "org_name"
     }
 }
-
-struct ContactCard: Decodable {
-    let label: String?
-    let value: String?
-    let primary: Bool?
-}
-
