@@ -27,6 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         applicationModel.setup()
+
+        let rootViewController = PersonsViewController(using: applicationModel)
+        let navigationController = UINavigationController.init(rootViewController: rootViewController)
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
         return true
     }
 }

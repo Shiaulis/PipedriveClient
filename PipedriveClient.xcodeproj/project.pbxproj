@@ -20,7 +20,7 @@
 		09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */; };
 		09DD4740212A5CE2005C1546 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* RequestBuilder.swift */; };
 		09E1F324212937230049988C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F323212937230049988C /* AppDelegate.swift */; };
-		09E1F326212937230049988C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F325212937230049988C /* ViewController.swift */; };
+		09E1F326212937230049988C /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F325212937230049988C /* PersonsViewController.swift */; };
 		09E1F32E212937240049988C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E1F32D212937240049988C /* Assets.xcassets */; };
 		09E1F331212937240049988C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E1F32F212937240049988C /* LaunchScreen.storyboard */; };
 		09E1F33C212937240049988C /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F33B212937240049988C /* RequestBuilderTests.swift */; };
@@ -61,7 +61,7 @@
 		09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcher.swift; sourceTree = "<group>"; };
 		09E1F320212937230049988C /* PipedriveClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipedriveClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E1F323212937230049988C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09E1F325212937230049988C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09E1F325212937230049988C /* PersonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewController.swift; sourceTree = "<group>"; };
 		09E1F32D212937240049988C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09E1F330212937240049988C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09E1F332212937240049988C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 			children = (
 				09E1F323212937230049988C /* AppDelegate.swift */,
 				09E1F35621297E8D0049988C /* Model */,
-				09E1F325212937230049988C /* ViewController.swift */,
+				09E1F325212937230049988C /* PersonsViewController.swift */,
 				09E1F32D212937240049988C /* Assets.xcassets */,
 				09E1F32F212937240049988C /* LaunchScreen.storyboard */,
 				09E1F332212937240049988C /* Info.plist */,
@@ -321,7 +321,7 @@
 			files = (
 				093F6E51212C4E4900B6AB68 /* CacheStorage.swift in Sources */,
 				0975F9FD212B2287002543CD /* DataMapper.swift in Sources */,
-				09E1F326212937230049988C /* ViewController.swift in Sources */,
+				09E1F326212937230049988C /* PersonsViewController.swift in Sources */,
 				09E1F324212937230049988C /* AppDelegate.swift in Sources */,
 				09E1F362212991FF0049988C /* Extensions.swift in Sources */,
 				09E1F355212962700049988C /* ApplicationModel.swift in Sources */,
