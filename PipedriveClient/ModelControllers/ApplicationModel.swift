@@ -13,7 +13,12 @@ import os.log
  Encapsulates all application model logic for UI
  */
 protocol DataProvider {
-    func updatePersonsModelsFromRemoteServer(completionHandler:@escaping (Error?, [PersonModelContoller]?) -> Void)
+    func updatePersonsModelsFromRemoteServer(completionHandler:@escaping (DataProviderUpdateModelResult) -> Void)
+}
+
+enum DataProviderUpdateModelResult {
+    case success ([PersonModelContoller])
+    case failure (Error)
 }
 
 class ApplicationModel {
@@ -62,12 +67,12 @@ class ApplicationModel {
 
     }
 
-    func requestAppPersonsList(completionHandler:@escaping (Error?, [PersonModelContoller]?) -> Void) {
+    func requestAppPersonsList(completionHandler:@escaping (DataProviderUpdateModelResult) -> Void) {
         // 1. Create request URL
         guard let url = requestBuilder?.createURL(for: .person) else {
             os_log("Failed to create url for all persons list request", log: ApplicationModel.logger, type: .error)
             assertionFailure()
-            completionHandler(ApplicationModelError.fatalError, nil)
+            completionHandler(.failure(ApplicationModelError.fatalError))
             return
         }
 
@@ -77,7 +82,7 @@ class ApplicationModel {
             case .success(let data):
                 guard let strongSelf = self else {
                     assertionFailure()
-                    completionHandler(ApplicationModelError.fatalError, nil)
+                    completionHandler(.failure(ApplicationModelError.fatalError))
                     return
                 }
 
@@ -90,20 +95,20 @@ class ApplicationModel {
                         strongSelf.cacheStorage?.cache(data: data, forCategory: .allPersons, completionHandler: { (error) in
                             if let error = error {
                                 os_log("Failed to cache received data. Error: '%@'", log: ApplicationModel.logger, type: .error, error.localizedDescription)
-                                completionHandler(error, strongSelf.personModelControllers)
-                                return
                             }
-                            os_log("Data successfully cached.", log: ApplicationModel.logger, type: .debug)
-                            completionHandler(nil, strongSelf.personModelControllers)
+                            else {
+                                os_log("Data successfully cached.", log: ApplicationModel.logger, type: .debug)
+                            }
+                            completionHandler(.success(personModelControllers))
                         })
                     }
                     else {
                         os_log("Failed to get person model controllers for remote request.", log: ApplicationModel.logger, type: .error)
-                        completionHandler(ApplicationModelError.unknownError, nil)
+                        completionHandler(.failure(ApplicationModelError.unknownError))
                     }
                 })
             case .failure(let error):
-                completionHandler(error, nil)
+                completionHandler(.failure(error))
             }
         }
     }
@@ -121,7 +126,7 @@ class ApplicationModel {
 }
 
 extension ApplicationModel: DataProvider {
-    func updatePersonsModelsFromRemoteServer(completionHandler: @escaping (Error?, [PersonModelContoller]?) -> Void) {
+    func updatePersonsModelsFromRemoteServer(completionHandler: @escaping (DataProviderUpdateModelResult) -> Void) {
         requestAppPersonsList(completionHandler: completionHandler)
     }
 }

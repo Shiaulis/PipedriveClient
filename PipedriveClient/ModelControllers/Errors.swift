@@ -52,3 +52,7 @@ enum ApplicationModelError: Error {
     case unknownError
     case fatalError
 }
+
+enum RemoteDataFetcherError: Error {
+    case unknownError
+}

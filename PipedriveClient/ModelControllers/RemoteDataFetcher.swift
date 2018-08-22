@@ -11,7 +11,7 @@ import os.log
 
 enum RemoteRequestResult {
     case success(Data)
-    case failure(Error?)
+    case failure(Error)
 }
 
 class RemoteDataFetcher {
@@ -51,7 +51,7 @@ class RemoteDataFetcher {
                            type: .error,
                            url.absoluteString, response ?? "")
 
-                    let result = RemoteRequestResult.failure(nil)
+                    let result = RemoteRequestResult.failure(RemoteDataFetcherError.unknownError)
                     assertionFailure()
                     completionHandler(result);
                     return

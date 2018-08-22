@@ -126,6 +126,14 @@
 			path = "Helper classes";
 			sourceTree = "<group>";
 		};
+		0941EA52212DE6DD00386435 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0947284F212BD142000E9CE4 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		09886466212DB2AC00A8E07C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				09E1F323212937230049988C /* AppDelegate.swift */,
-				09E1F35621297E8D0049988C /* Model */,
+				0941EA52212DE6DD00386435 /* Model */,
+				09E1F35621297E8D0049988C /* ModelControllers */,
 				09886469212DBBCE00A8E07C /* View Models */,
 				09CC4479212D26150091F366 /* View Controllers */,
 				09886466212DB2AC00A8E07C /* Views */,
@@ -205,7 +214,7 @@
 			path = PipedriveClientUITests;
 			sourceTree = "<group>";
 		};
-		09E1F35621297E8D0049988C /* Model */ = {
+		09E1F35621297E8D0049988C /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
 				09E1F354212962700049988C /* ApplicationModel.swift */,
@@ -214,12 +223,11 @@
 				09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */,
 				09A011722129EA7E003EBD5B /* RequestBuilder.swift */,
 				0975F9FC212B2287002543CD /* DataMapper.swift */,
-				0947284F212BD142000E9CE4 /* Person.swift */,
 				09472851212BD1C6000E9CE4 /* PersonModelController.swift */,
 				093F6E50212C4E4900B6AB68 /* CacheStorage.swift */,
 				0911A05E212C9BE200D4C063 /* LocalFileManager.swift */,
 			);
-			path = Model;
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
