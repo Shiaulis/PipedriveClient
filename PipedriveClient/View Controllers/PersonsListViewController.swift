@@ -14,12 +14,12 @@ class PersonsListViewController: UITableViewController {
 
     static private let controllerTitle = NSLocalizedString("Contacts", comment: "controller title")
 
-    private let dataProvider: DataProvider
+    private let viewModel: PersonsListViewModel
 
     // MARK: - Initializaion -
 
-    init(using dataProvider: DataProvider) {
-        self.dataProvider = dataProvider
+    init(using viewModel: PersonsListViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -58,11 +58,6 @@ class PersonsListViewController: UITableViewController {
     // MARK: - Targeted actions -
 
     @objc func refreshControllPulledAction() {
-        dataProvider.updatePersonsModelsFromRemoteServer { (error, personsModelList) in
-            DispatchQueue.main.async {
-                self.tableView.refreshControl?.endRefreshing()
-            }
-        }
     }
 }
 

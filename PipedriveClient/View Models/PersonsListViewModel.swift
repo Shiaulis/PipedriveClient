@@ -9,5 +9,14 @@
 import Foundation
 
 class PersonsListViewModel {
-    <#fields#>
+
+    // MARK: - Properties -
+
+    private let dataProvider: DataProvider
+
+    // MARK: - Initialization -
+
+    init(using dataProvider: DataProvider) {
+        self.dataProvider = dataProvider
+    }
 }
