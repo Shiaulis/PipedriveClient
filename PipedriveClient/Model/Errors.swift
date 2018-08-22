@@ -47,3 +47,8 @@ enum CacheStorageError: Error {
 enum SystemLocalFileManagerError: Error {
     case failedToDetectSystemCacheDirectory
 }
+
+enum ApplicationModelError: Error {
+    case unknownError
+    case fatalError
+}
