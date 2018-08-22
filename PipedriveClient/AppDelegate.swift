@@ -29,9 +29,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         applicationModel.setup()
         return true
     }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        applicationModel.saveDataInPersistentStorage()
-    }
 }
 

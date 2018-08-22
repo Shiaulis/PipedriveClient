@@ -24,8 +24,6 @@ class ApplicationModel {
     private let requestBuilder: RequestBuilder?
     private let remoteDataFetcher: RemoteDataFetcher
     private let dataMapper: DataMapper
-    private let persistentDataManager: PersistentDataManager?
-    private let persistentDataManagerError: Error?
 
     private var personModelControllers:[PersonModelContoller]
 
@@ -34,16 +32,6 @@ class ApplicationModel {
     // MARK: - Initialization -
 
     init() {
-        do {
-            try self.persistentDataManager = PersistentDataManager()
-            self.persistentDataManagerError = nil
-            os_log("Persistent storage initiated successfully", log: ApplicationModel.logger, type: .debug)
-        } catch  {
-            self.persistentDataManager = nil
-            self.persistentDataManagerError = error
-            os_log("Failed to initiate persistent storage. Error: '%@'. Reason: '%@'.", log: ApplicationModel.logger, type: .error, error.localizedDescription, error.failureReason)
-            assertionFailure()
-        }
         self.requestBuilder = RequestBuilder.init(usingURLScheme: ApplicationModel.urlScheme,
                                                   companyName: ApplicationModel.companyName,
                                                   apiVersion: ApplicationModel.apiVersion,
@@ -117,16 +105,5 @@ class ApplicationModel {
             assertionFailure()
             completionHandler(nil)
         }
-    }
-
-    func saveDataInPersistentStorage() {
-        do {
-            try persistentDataManager?.saveContext()
-        } catch {
-            os_log("Failed to save data to persistent storage. Error: '%@'. Reason: '%@'.", log: ApplicationModel.logger, type: .error, error.localizedDescription, error.failureReason)
-            assertionFailure()
-        }
-    }
-
-    
+    }    
 }

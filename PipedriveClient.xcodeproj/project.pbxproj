@@ -21,13 +21,11 @@
 		09DD4740212A5CE2005C1546 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* RequestBuilder.swift */; };
 		09E1F324212937230049988C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F323212937230049988C /* AppDelegate.swift */; };
 		09E1F326212937230049988C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F325212937230049988C /* ViewController.swift */; };
-		09E1F32C212937230049988C /* PipedriveClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F32A212937230049988C /* PipedriveClient.xcdatamodeld */; };
 		09E1F32E212937240049988C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E1F32D212937240049988C /* Assets.xcassets */; };
 		09E1F331212937240049988C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E1F32F212937240049988C /* LaunchScreen.storyboard */; };
 		09E1F33C212937240049988C /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F33B212937240049988C /* RequestBuilderTests.swift */; };
 		09E1F347212937240049988C /* PipedriveClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F346212937240049988C /* PipedriveClientUITests.swift */; };
 		09E1F355212962700049988C /* ApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F354212962700049988C /* ApplicationModel.swift */; };
-		09E1F35E212982240049988C /* PersistentDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F35D212982240049988C /* PersistentDataManager.swift */; };
 		09E1F36021298E380049988C /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F35F21298E380049988C /* Errors.swift */; };
 		09E1F362212991FF0049988C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F361212991FF0049988C /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -64,7 +62,6 @@
 		09E1F320212937230049988C /* PipedriveClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipedriveClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E1F323212937230049988C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09E1F325212937230049988C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		09E1F32B212937230049988C /* PipedriveClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PipedriveClient.xcdatamodel; sourceTree = "<group>"; };
 		09E1F32D212937240049988C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09E1F330212937240049988C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09E1F332212937240049988C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,7 +72,6 @@
 		09E1F346212937240049988C /* PipedriveClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipedriveClientUITests.swift; sourceTree = "<group>"; };
 		09E1F348212937240049988C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E1F354212962700049988C /* ApplicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationModel.swift; sourceTree = "<group>"; };
-		09E1F35D212982240049988C /* PersistentDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentDataManager.swift; sourceTree = "<group>"; };
 		09E1F35F21298E380049988C /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		09E1F361212991FF0049988C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,8 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				09E1F354212962700049988C /* ApplicationModel.swift */,
-				09E1F35D212982240049988C /* PersistentDataManager.swift */,
-				09E1F32A212937230049988C /* PipedriveClient.xcdatamodeld */,
 				09E1F35F21298E380049988C /* Errors.swift */,
 				09E1F361212991FF0049988C /* Extensions.swift */,
 				09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */,
@@ -329,14 +323,12 @@
 				0975F9FD212B2287002543CD /* DataMapper.swift in Sources */,
 				09E1F326212937230049988C /* ViewController.swift in Sources */,
 				09E1F324212937230049988C /* AppDelegate.swift in Sources */,
-				09E1F35E212982240049988C /* PersistentDataManager.swift in Sources */,
 				09E1F362212991FF0049988C /* Extensions.swift in Sources */,
 				09E1F355212962700049988C /* ApplicationModel.swift in Sources */,
 				09E1F36021298E380049988C /* Errors.swift in Sources */,
 				09A011732129EA7E003EBD5B /* RequestBuilder.swift in Sources */,
 				09472852212BD1C6000E9CE4 /* PersonModelController.swift in Sources */,
 				09472850212BD142000E9CE4 /* Person.swift in Sources */,
-				09E1F32C212937230049988C /* PipedriveClient.xcdatamodeld in Sources */,
 				09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */,
 				0911A05F212C9BE200D4C063 /* LocalFileManager.swift in Sources */,
 			);
@@ -662,19 +654,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		09E1F32A212937230049988C /* PipedriveClient.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				09E1F32B212937230049988C /* PipedriveClient.xcdatamodel */,
-			);
-			currentVersion = 09E1F32B212937230049988C /* PipedriveClient.xcdatamodel */;
-			path = PipedriveClient.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 09E1F318212937230049988C /* Project object */;
 }
