@@ -17,12 +17,13 @@
 		09472852212BD1C6000E9CE4 /* PersonModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09472851212BD1C6000E9CE4 /* PersonModelController.swift */; };
 		0975F9FD212B2287002543CD /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975F9FC212B2287002543CD /* DataMapper.swift */; };
 		09886465212DB2A300A8E07C /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09886464212DB2A300A8E07C /* PersonTableViewCell.swift */; };
+		09886468212DBBC600A8E07C /* PersonsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09886467212DBBC600A8E07C /* PersonsListViewModel.swift */; };
 		09A011732129EA7E003EBD5B /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* RequestBuilder.swift */; };
 		09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */; };
 		09CC447B212D26410091F366 /* PipedriveNavitagionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */; };
 		09DD4740212A5CE2005C1546 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* RequestBuilder.swift */; };
 		09E1F324212937230049988C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F323212937230049988C /* AppDelegate.swift */; };
-		09E1F326212937230049988C /* PersonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F325212937230049988C /* PersonsTableViewController.swift */; };
+		09E1F326212937230049988C /* PersonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F325212937230049988C /* PersonsListViewController.swift */; };
 		09E1F32E212937240049988C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E1F32D212937240049988C /* Assets.xcassets */; };
 		09E1F331212937240049988C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E1F32F212937240049988C /* LaunchScreen.storyboard */; };
 		09E1F33C212937240049988C /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F33B212937240049988C /* RequestBuilderTests.swift */; };
@@ -60,12 +61,13 @@
 		09472851212BD1C6000E9CE4 /* PersonModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModelController.swift; sourceTree = "<group>"; };
 		0975F9FC212B2287002543CD /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
 		09886464212DB2A300A8E07C /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		09886467212DBBC600A8E07C /* PersonsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListViewModel.swift; sourceTree = "<group>"; };
 		09A011722129EA7E003EBD5B /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcher.swift; sourceTree = "<group>"; };
 		09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipedriveNavitagionController.swift; sourceTree = "<group>"; };
 		09E1F320212937230049988C /* PipedriveClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipedriveClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E1F323212937230049988C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09E1F325212937230049988C /* PersonsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsTableViewController.swift; sourceTree = "<group>"; };
+		09E1F325212937230049988C /* PersonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListViewController.swift; sourceTree = "<group>"; };
 		09E1F32D212937240049988C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09E1F330212937240049988C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09E1F332212937240049988C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,13 +134,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		09CC4479212D26150091F366 /* ViewControllers */ = {
+		09886469212DBBCE00A8E07C /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				09E1F325212937230049988C /* PersonsTableViewController.swift */,
+				09886467212DBBC600A8E07C /* PersonsListViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		09CC4479212D26150091F366 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				09E1F325212937230049988C /* PersonsListViewController.swift */,
 				09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */,
 			);
-			path = ViewControllers;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		09E1F317212937230049988C = {
@@ -166,7 +176,8 @@
 			children = (
 				09E1F323212937230049988C /* AppDelegate.swift */,
 				09E1F35621297E8D0049988C /* Model */,
-				09CC4479212D26150091F366 /* ViewControllers */,
+				09886469212DBBCE00A8E07C /* View Models */,
+				09CC4479212D26150091F366 /* View Controllers */,
 				09886466212DB2AC00A8E07C /* Views */,
 				09E1F32D212937240049988C /* Assets.xcassets */,
 				09E1F32F212937240049988C /* LaunchScreen.storyboard */,
@@ -343,8 +354,9 @@
 			files = (
 				093F6E51212C4E4900B6AB68 /* CacheStorage.swift in Sources */,
 				09CC447B212D26410091F366 /* PipedriveNavitagionController.swift in Sources */,
+				09886468212DBBC600A8E07C /* PersonsListViewModel.swift in Sources */,
 				0975F9FD212B2287002543CD /* DataMapper.swift in Sources */,
-				09E1F326212937230049988C /* PersonsTableViewController.swift in Sources */,
+				09E1F326212937230049988C /* PersonsListViewController.swift in Sources */,
 				09E1F324212937230049988C /* AppDelegate.swift in Sources */,
 				09E1F362212991FF0049988C /* Extensions.swift in Sources */,
 				09E1F355212962700049988C /* ApplicationModel.swift in Sources */,

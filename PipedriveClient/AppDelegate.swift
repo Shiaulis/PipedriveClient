@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         applicationModel.setup()
 
-        let rootViewController = PersonsTableViewController(using: applicationModel)
+        let rootViewController = PersonsListViewController(using: applicationModel)
         let navigationController = PipedriveNavitagionController.init(rootViewController: rootViewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

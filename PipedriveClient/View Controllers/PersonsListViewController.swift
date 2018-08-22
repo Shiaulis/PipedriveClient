@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PersonsTableViewController: UITableViewController {
+class PersonsListViewController: UITableViewController {
 
     // MARK: - Properties -
 
@@ -46,7 +46,7 @@ class PersonsTableViewController: UITableViewController {
     }
 
     private func setupNavigationBar() {
-        navigationItem.title = PersonsTableViewController.controllerTitle
+        navigationItem.title = PersonsListViewController.controllerTitle
     }
 
     private func setupTableView() {
