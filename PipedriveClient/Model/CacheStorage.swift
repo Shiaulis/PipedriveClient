@@ -43,7 +43,7 @@ class CacheStorage {
 
     // MARK: - Initialization -
 
-    init(queue: DispatchQueue, fileManager: LocalFileManager) throws {
+    init(queue: DispatchQueue, fileManager: LocalFileManager) {
         self.fileManager = fileManager
         self.destinationCacheDirectoryURL = fileManager.cacheDirectoryURL
         self.dispatchQueue = queue
@@ -51,7 +51,7 @@ class CacheStorage {
 
     // MARK: - Public methods -
 
-    func cache(data: Data, forCategory category: CacheCategory, completionHandler:(Error?) -> Void) throws {
+    func cache(data: Data, forCategory category: CacheCategory, completionHandler:(Error?) -> Void) {
         dispatchQueue.sync { [weak self] in
             guard let strongSelf = self else {
                 assertionFailure()
