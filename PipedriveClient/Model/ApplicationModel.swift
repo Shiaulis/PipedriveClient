@@ -56,7 +56,7 @@ class ApplicationModel {
         let fileManager: LocalFileManager
         do {
             try fileManager = SystemLocalFileManager()
-            self.cacheStorage = try CacheStorage.init(queue: .global(qos: .userInitiated), fileManager: fileManager)
+            self.cacheStorage = CacheStorage.init(queue: .global(qos: .userInitiated), fileManager: fileManager)
         } catch {
             os_log("Failed to initiate cache storage. Error: '%@'", log: ApplicationModel.logger, type: .error, error.localizedDescription)
             self.cacheStorage = nil
@@ -90,7 +90,7 @@ class ApplicationModel {
                         // 4. Save parsed information to runtime storage
                         strongSelf.personModelControllers = personModelControllers
                         // 5. Cache data to file system
-                        try? strongSelf.cacheStorage?.cache(data: data, forCategory: .allPersons, completionHandler: { (error) in
+                        strongSelf.cacheStorage?.cache(data: data, forCategory: .allPersons, completionHandler: { (error) in
                             if let error = error {
                                 os_log("Failed to cache received data. Error: '%@'", log: ApplicationModel.logger, type: .error, error.localizedDescription)
                                 return
