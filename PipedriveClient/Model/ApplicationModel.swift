@@ -9,6 +9,13 @@
 import Foundation
 import os.log
 
+/**
+ Encapsulates all application model logic for UI
+ */
+protocol DataProvider {
+
+}
+
 class ApplicationModel {
 
     // MARK: - Properties -
@@ -96,7 +103,7 @@ class ApplicationModel {
         }
     }
 
-    func decodePersons(from data: Data, completionHandler:([PersonModelContoller]?) -> Void) {
+    private func decodePersons(from data: Data, completionHandler:([PersonModelContoller]?) -> Void) {
         do {
             let personModelControllers = try dataMapper.decodePersons(from: data)
             completionHandler(personModelControllers)
@@ -106,4 +113,8 @@ class ApplicationModel {
             completionHandler(nil)
         }
     }    
+}
+
+extension ApplicationModel: DataProvider {
+    
 }
