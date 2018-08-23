@@ -66,5 +66,14 @@ class PersonsListViewModel {
 
         return PersonCellViewModel(using: personModelControllers[indexPath.row])
     }
+
+    func personDetailsViewModel(for indexPath: IndexPath) -> PersonDetailsViewModel? {
+        guard indexPath.row < personModelControllers.count else {
+            assertionFailure()
+            return nil
+        }
+
+        return PersonDetailsViewModel(using: personModelControllers[indexPath.row])
+    }
 }
 
