@@ -70,6 +70,13 @@ class PersonsListViewModel {
 struct PersonCellViewModel {
 
     // MARK: - Properties -
+    var titleLabelText: String {
+        return modelController.displayName
+    }
+
+    var subtitleLabelText: String {
+        return modelController.organizationDisplayName
+    }
 
     private let modelController: PersonModelContoller
 

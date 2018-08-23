@@ -47,16 +47,13 @@ class PersonsListViewController: UITableViewController {
             return UITableViewCell()
         }
 
-//        guar let modelController = viewModel.modelController(for: indexPath) else {
-//            assertionFailure()
-//            return UITableViewCell()
-//        }
+        guard let cellViewModel = viewModel.personCellViewModel(for: indexPath) else {
+            assertionFailure()
+            return UITableViewCell()
+        }
 
-
-//        cell.nameLabel.text = cellVM.titleText
-//        cell.descriptionLabel.text = cellVM.descText
-//        cell.mainImageView?.sd_setImage(with: URL( string: cellVM.imageUrl ), completed: nil)
-//        cell.dateLabel.text = cellVM.dateText
+        cell.titleText = cellViewModel.titleLabelText
+        cell.subtitleText = cellViewModel.subtitleLabelText
 
         return cell
 

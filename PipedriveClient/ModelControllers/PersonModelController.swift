@@ -15,8 +15,6 @@ class PersonModelContoller {
 
     // MARK: - Properties -
 
-    private let person: Person
-
     var displayName: String {
         if let fullName = person.name {
             return fullName
@@ -31,6 +29,12 @@ class PersonModelContoller {
         return compositeName
     }
 
+    var organizationDisplayName: String {
+        return "some"
+    }
+
+
+    private let person: Person
 
     // MARK: - Inilializaion -
 
