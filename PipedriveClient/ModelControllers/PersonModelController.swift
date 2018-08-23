@@ -30,7 +30,11 @@ class PersonModelContoller {
     }
 
     var organizationDisplayName: String {
-        return "some"
+        return person.organizationName ?? ""
+    }
+
+    var contactCardModelControllers: [ContactCardModelController] {
+        person.
     }
 
 
@@ -40,5 +44,18 @@ class PersonModelContoller {
 
     init(for person: Person) {
         self.person = person
+    }
+}
+
+class ContactCardModelController {
+
+    // MARK: - Properties -
+
+    private let contactCard: ContactCard
+
+    // MARK: - Initialization -
+
+    init(using contactCard: ContactCard) {
+        self.contactCard = contactCard
     }
 }

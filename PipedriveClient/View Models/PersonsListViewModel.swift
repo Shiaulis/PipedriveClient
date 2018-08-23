@@ -11,9 +11,11 @@ import Foundation
 class PersonsListViewModel {
 
     // MARK: - Properties -
+
     var showAlertBlock: (() -> Void)?
     var updateLoadingStatus: (() -> Void)?
     var reloadTableViewBlock: (() -> Void)?
+
     var isLoading: Bool = false {
         didSet {
             self.updateLoadingStatus?()
@@ -27,7 +29,6 @@ class PersonsListViewModel {
     var numberOfCells: Int {
         return personModelControllers.count
     }
-
 
     private let dataProvider: DataProvider
     private var personModelControllers: [PersonModelContoller] {

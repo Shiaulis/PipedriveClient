@@ -12,6 +12,8 @@
 		0911A063212D205D00D4C063 /* TestFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911A062212D205D00D4C063 /* TestFileManager.swift */; };
 		0911A068212D20F300D4C063 /* TestNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911A067212D20F300D4C063 /* TestNetworkProvider.swift */; };
 		09180585212A7F09000B0B95 /* RemoteDataFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09180584212A7F09000B0B95 /* RemoteDataFetcherTests.swift */; };
+		092D0A92212E6F230045DA41 /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092D0A91212E6F230045DA41 /* PersonDetailsViewController.swift */; };
+		092D0A94212E6F4F0045DA41 /* PersonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092D0A93212E6F4F0045DA41 /* PersonDetailsViewModel.swift */; };
 		093F6E51212C4E4900B6AB68 /* CacheStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093F6E50212C4E4900B6AB68 /* CacheStorage.swift */; };
 		0941EA54212DE73800386435 /* ContactCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941EA53212DE73800386435 /* ContactCard.swift */; };
 		09472850212BD142000E9CE4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0947284F212BD142000E9CE4 /* Person.swift */; };
@@ -57,6 +59,8 @@
 		0911A062212D205D00D4C063 /* TestFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFileManager.swift; sourceTree = "<group>"; };
 		0911A067212D20F300D4C063 /* TestNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkProvider.swift; sourceTree = "<group>"; };
 		09180584212A7F09000B0B95 /* RemoteDataFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcherTests.swift; sourceTree = "<group>"; };
+		092D0A91212E6F230045DA41 /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
+		092D0A93212E6F4F0045DA41 /* PersonDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewModel.swift; sourceTree = "<group>"; };
 		093F6E50212C4E4900B6AB68 /* CacheStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheStorage.swift; sourceTree = "<group>"; };
 		0941EA53212DE73800386435 /* ContactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCard.swift; sourceTree = "<group>"; };
 		0947284F212BD142000E9CE4 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				09886467212DBBC600A8E07C /* PersonsListViewModel.swift */,
+				092D0A93212E6F4F0045DA41 /* PersonDetailsViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			children = (
 				09E1F325212937230049988C /* PersonsListViewController.swift */,
 				09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */,
+				092D0A91212E6F230045DA41 /* PersonDetailsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -364,10 +370,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				093F6E51212C4E4900B6AB68 /* CacheStorage.swift in Sources */,
+				092D0A92212E6F230045DA41 /* PersonDetailsViewController.swift in Sources */,
 				09CC447B212D26410091F366 /* PipedriveNavitagionController.swift in Sources */,
 				0941EA54212DE73800386435 /* ContactCard.swift in Sources */,
 				09886468212DBBC600A8E07C /* PersonsListViewModel.swift in Sources */,
 				0975F9FD212B2287002543CD /* DataMapper.swift in Sources */,
+				092D0A94212E6F4F0045DA41 /* PersonDetailsViewModel.swift in Sources */,
 				09E1F326212937230049988C /* PersonsListViewController.swift in Sources */,
 				09E1F324212937230049988C /* AppDelegate.swift in Sources */,
 				09E1F362212991FF0049988C /* Extensions.swift in Sources */,
