@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PersonDetailsViewModel {
+struct PersonDetailsViewModel {
 
     // MARK: - Properties -
 
@@ -20,8 +20,6 @@ class PersonDetailsViewModel {
         return modelController.organizationDisplayName
     }
 
-
-
     private let modelController: PersonModelContoller
 
     // MARK: - Initialization -
@@ -30,4 +28,3 @@ class PersonDetailsViewModel {
         self.modelController = modelController
     }
 }
-
