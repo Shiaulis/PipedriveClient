@@ -1,5 +1,5 @@
 //
-//  PersonDetailsViewModel.swift
+//  PersonCellViewModel.swift
 //  PipedriveClient
 //
 //  Created by Andrius Shiaulis on 23.08.2018.
@@ -8,19 +8,16 @@
 
 import Foundation
 
-class PersonDetailsViewModel {
+struct PersonCellViewModel {
 
     // MARK: - Properties -
-
-    var personNameLabelText: String {
+    var titleLabelText: String {
         return modelController.displayName
     }
 
-    var organizationNameLabelText: String {
+    var subtitleLabelText: String {
         return modelController.organizationDisplayName
     }
-
-
 
     private let modelController: PersonModelContoller
 
@@ -30,4 +27,3 @@ class PersonDetailsViewModel {
         self.modelController = modelController
     }
 }
-

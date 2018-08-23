@@ -24,6 +24,8 @@
 		09A011732129EA7E003EBD5B /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* RequestBuilder.swift */; };
 		09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */; };
 		09CC447B212D26410091F366 /* PipedriveNavitagionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */; };
+		09CF8058212F0C4D0059CF3B /* ContactDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF8057212F0C4D0059CF3B /* ContactDetailsViewModel.swift */; };
+		09CF805A212F0C770059CF3B /* PersonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF8059212F0C770059CF3B /* PersonCellViewModel.swift */; };
 		09DD4740212A5CE2005C1546 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* RequestBuilder.swift */; };
 		09E1F324212937230049988C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F323212937230049988C /* AppDelegate.swift */; };
 		09E1F326212937230049988C /* PersonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F325212937230049988C /* PersonsListViewController.swift */; };
@@ -71,6 +73,8 @@
 		09A011722129EA7E003EBD5B /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcher.swift; sourceTree = "<group>"; };
 		09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipedriveNavitagionController.swift; sourceTree = "<group>"; };
+		09CF8057212F0C4D0059CF3B /* ContactDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewModel.swift; sourceTree = "<group>"; };
+		09CF8059212F0C770059CF3B /* PersonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellViewModel.swift; sourceTree = "<group>"; };
 		09E1F320212937230049988C /* PipedriveClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipedriveClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E1F323212937230049988C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09E1F325212937230049988C /* PersonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListViewController.swift; sourceTree = "<group>"; };
@@ -153,7 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				09886467212DBBC600A8E07C /* PersonsListViewModel.swift */,
+				09CF8059212F0C770059CF3B /* PersonCellViewModel.swift */,
 				092D0A93212E6F4F0045DA41 /* PersonDetailsViewModel.swift */,
+				09CF8057212F0C4D0059CF3B /* ContactDetailsViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -386,7 +392,9 @@
 				09472850212BD142000E9CE4 /* Person.swift in Sources */,
 				09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */,
 				09886465212DB2A300A8E07C /* PersonTableViewCell.swift in Sources */,
+				09CF8058212F0C4D0059CF3B /* ContactDetailsViewModel.swift in Sources */,
 				0911A05F212C9BE200D4C063 /* LocalFileManager.swift in Sources */,
+				09CF805A212F0C770059CF3B /* PersonCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
