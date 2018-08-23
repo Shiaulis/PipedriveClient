@@ -169,8 +169,8 @@
 		09CC4479212D26150091F366 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				09E1F325212937230049988C /* PersonsListViewController.swift */,
 				09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */,
+				09E1F325212937230049988C /* PersonsListViewController.swift */,
 				092D0A91212E6F230045DA41 /* PersonDetailsViewController.swift */,
 			);
 			path = "View Controllers";
