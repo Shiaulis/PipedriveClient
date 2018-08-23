@@ -9,6 +9,6 @@
 import Foundation
 
 struct ContactDetailsViewModel {
-    var contactTypeTitle
-    var contactValueTitle
+    var contactTypeTitle: String
+    var contactValueTitle: String
 }

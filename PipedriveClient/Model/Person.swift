@@ -15,8 +15,8 @@ struct Person: Decodable {
     let name: String?
     let firstName: String?
     let secondName: String?
-    let phone: [ContactCard]?
-    let email: [ContactCard]?
+    let phoneContactCards: [ContactCard]?
+    let emailContactCards: [ContactCard]?
     let lastUpdated: String?
     let organizationName: String?
     
@@ -27,8 +27,8 @@ struct Person: Decodable {
         case name
         case firstName = "first_name"
         case secondName = "last_name"
-        case phone
-        case email
+        case phoneContactCards = "phone"
+        case emailContactCards = "email"
         case lastUpdated = "update_time"
         case organizationName = "org_name"
     }

@@ -26,6 +26,7 @@
 		09CC447B212D26410091F366 /* PipedriveNavitagionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */; };
 		09CF8058212F0C4D0059CF3B /* ContactDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF8057212F0C4D0059CF3B /* ContactDetailsViewModel.swift */; };
 		09CF805A212F0C770059CF3B /* PersonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF8059212F0C770059CF3B /* PersonCellViewModel.swift */; };
+		09CF805C212F0FDF0059CF3B /* ContactCardModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF805B212F0FDF0059CF3B /* ContactCardModelController.swift */; };
 		09DD4740212A5CE2005C1546 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* RequestBuilder.swift */; };
 		09E1F324212937230049988C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F323212937230049988C /* AppDelegate.swift */; };
 		09E1F326212937230049988C /* PersonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F325212937230049988C /* PersonsListViewController.swift */; };
@@ -75,6 +76,7 @@
 		09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipedriveNavitagionController.swift; sourceTree = "<group>"; };
 		09CF8057212F0C4D0059CF3B /* ContactDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewModel.swift; sourceTree = "<group>"; };
 		09CF8059212F0C770059CF3B /* PersonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellViewModel.swift; sourceTree = "<group>"; };
+		09CF805B212F0FDF0059CF3B /* ContactCardModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardModelController.swift; sourceTree = "<group>"; };
 		09E1F320212937230049988C /* PipedriveClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipedriveClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E1F323212937230049988C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09E1F325212937230049988C /* PersonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,19 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		09CF805D212F0FFD0059CF3B /* ApplicationEngine */ = {
+			isa = PBXGroup;
+			children = (
+				09E1F354212962700049988C /* ApplicationModel.swift */,
+				09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */,
+				09A011722129EA7E003EBD5B /* RequestBuilder.swift */,
+				0975F9FC212B2287002543CD /* DataMapper.swift */,
+				093F6E50212C4E4900B6AB68 /* CacheStorage.swift */,
+				0911A05E212C9BE200D4C063 /* LocalFileManager.swift */,
+			);
+			path = ApplicationEngine;
+			sourceTree = "<group>";
+		};
 		09E1F317212937230049988C = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				09E1F323212937230049988C /* AppDelegate.swift */,
+				09CF805D212F0FFD0059CF3B /* ApplicationEngine */,
 				0941EA52212DE6DD00386435 /* Model */,
 				09E1F35621297E8D0049988C /* ModelControllers */,
 				09886469212DBBCE00A8E07C /* View Models */,
@@ -232,15 +248,10 @@
 		09E1F35621297E8D0049988C /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				09E1F354212962700049988C /* ApplicationModel.swift */,
 				09E1F35F21298E380049988C /* Errors.swift */,
 				09E1F361212991FF0049988C /* Extensions.swift */,
-				09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */,
-				09A011722129EA7E003EBD5B /* RequestBuilder.swift */,
-				0975F9FC212B2287002543CD /* DataMapper.swift */,
 				09472851212BD1C6000E9CE4 /* PersonModelController.swift */,
-				093F6E50212C4E4900B6AB68 /* CacheStorage.swift */,
-				0911A05E212C9BE200D4C063 /* LocalFileManager.swift */,
+				09CF805B212F0FDF0059CF3B /* ContactCardModelController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -395,6 +406,7 @@
 				09CF8058212F0C4D0059CF3B /* ContactDetailsViewModel.swift in Sources */,
 				0911A05F212C9BE200D4C063 /* LocalFileManager.swift in Sources */,
 				09CF805A212F0C770059CF3B /* PersonCellViewModel.swift in Sources */,
+				09CF805C212F0FDF0059CF3B /* ContactCardModelController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

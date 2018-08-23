@@ -8,9 +8,13 @@
 
 import Foundation
 
-// The conception of this type of controller was borrowed
-// from John Sundell article about proper encapsulation
+// The conception of this type of controller (model controller)
+// was borrowed from John Sundell article about proper encapsulation.
+// https://www.swiftbysundell.com/posts/model-controllers-in-swift
 
+/**
+ Person Model Controller encapsulates or data that are needed from 'person' entity
+ */
 class PersonModelContoller {
 
     // MARK: - Properties -
@@ -33,10 +37,13 @@ class PersonModelContoller {
         return person.organizationName ?? ""
     }
 
-    var contactCardModelControllers: [ContactCardModelController] {
-        person.
+    var phoneContactCardModelControllers: [ContactCardModelController] {
+        return contactCardModelControllers(for: person.phoneContactCards)
     }
 
+    var emailContactCardModelControllers: [ContactCardModelController] {
+        return contactCardModelControllers(for: person.emailContactCards)
+    }
 
     private let person: Person
 
@@ -45,17 +52,18 @@ class PersonModelContoller {
     init(for person: Person) {
         self.person = person
     }
-}
 
-class ContactCardModelController {
+    // MARK: - Private merhods -
 
-    // MARK: - Properties -
+    private func contactCardModelControllers(for contactCards:[ContactCard]?) -> [ContactCardModelController] {
+        var modelControllers: [ContactCardModelController] = []
+        if let contactCards = contactCards {
+            for contactCard in contactCards {
+                let modelController = ContactCardModelController.init(using: contactCard)
+                modelControllers.append(modelController)
+            }
+        }
+        return modelControllers
 
-    private let contactCard: ContactCard
-
-    // MARK: - Initialization -
-
-    init(using contactCard: ContactCard) {
-        self.contactCard = contactCard
     }
 }
