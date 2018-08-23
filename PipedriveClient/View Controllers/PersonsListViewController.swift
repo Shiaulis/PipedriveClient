@@ -56,9 +56,17 @@ class PersonsListViewController: UITableViewController {
         cell.subtitleText = cellViewModel.subtitleLabelText
 
         return cell
-
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let personDetailsViewModel = viewModel.personDetailsViewModel(for: indexPath) else {
+            assertionFailure()
+            return
+        }
+
+        let personDetailsViewController = PersonDetailsViewController(using: personDetailsViewModel)
+        navigationController?.pushViewController(personDetailsViewController, animated: true)
+    }
 
     // MARK: - Private methods -
 
@@ -120,6 +128,4 @@ class PersonsListViewController: UITableViewController {
         alert.addAction( UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-
 }
-
