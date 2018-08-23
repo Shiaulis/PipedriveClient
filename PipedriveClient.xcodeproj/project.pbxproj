@@ -192,6 +192,8 @@
 		09CF805E212F10BB0059CF3B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				09E1F35F21298E380049988C /* Errors.swift */,
+				09E1F361212991FF0049988C /* Extensions.swift */,
 				09E1F32D212937240049988C /* Assets.xcassets */,
 				09E1F332212937240049988C /* Info.plist */,
 				09E1F32F212937240049988C /* LaunchScreen.storyboard */,
@@ -256,8 +258,6 @@
 		09E1F35621297E8D0049988C /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				09E1F35F21298E380049988C /* Errors.swift */,
-				09E1F361212991FF0049988C /* Extensions.swift */,
 				09472851212BD1C6000E9CE4 /* PersonModelController.swift */,
 				09CF805B212F0FDF0059CF3B /* ContactCardModelController.swift */,
 			);
