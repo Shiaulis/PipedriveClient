@@ -21,6 +21,7 @@
 		0975F9FD212B2287002543CD /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975F9FC212B2287002543CD /* DataMapper.swift */; };
 		09886465212DB2A300A8E07C /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09886464212DB2A300A8E07C /* PersonTableViewCell.swift */; };
 		09886468212DBBC600A8E07C /* PersonsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09886467212DBBC600A8E07C /* PersonsListViewModel.swift */; };
+		0996552D212FEA790092D707 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0996552C212FEA790092D707 /* DataProvider.swift */; };
 		09A011732129EA7E003EBD5B /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* RequestBuilder.swift */; };
 		09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */; };
 		09CC447B212D26410091F366 /* PipedriveNavitagionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */; };
@@ -72,6 +73,7 @@
 		0975F9FC212B2287002543CD /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
 		09886464212DB2A300A8E07C /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		09886467212DBBC600A8E07C /* PersonsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListViewModel.swift; sourceTree = "<group>"; };
+		0996552C212FEA790092D707 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		09A011722129EA7E003EBD5B /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcher.swift; sourceTree = "<group>"; };
 		09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipedriveNavitagionController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				09E1F354212962700049988C /* ApplicationModel.swift */,
+				0996552C212FEA790092D707 /* DataProvider.swift */,
 				09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */,
 				09A011722129EA7E003EBD5B /* RequestBuilder.swift */,
 				0975F9FC212B2287002543CD /* DataMapper.swift */,
@@ -406,6 +409,7 @@
 				092D0A94212E6F4F0045DA41 /* PersonDetailsViewModel.swift in Sources */,
 				09E1F326212937230049988C /* PersonsListViewController.swift in Sources */,
 				09E1F324212937230049988C /* AppDelegate.swift in Sources */,
+				0996552D212FEA790092D707 /* DataProvider.swift in Sources */,
 				09E1F362212991FF0049988C /* Extensions.swift in Sources */,
 				09E1F355212962700049988C /* ApplicationModel.swift in Sources */,
 				09E1F36021298E380049988C /* Errors.swift in Sources */,

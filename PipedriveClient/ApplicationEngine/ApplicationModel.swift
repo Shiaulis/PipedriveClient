@@ -9,18 +9,6 @@
 import Foundation
 import os.log
 
-/**
- Encapsulates all application model logic for UI
- */
-protocol DataProvider {
-    func updatePersonsModelsFromRemoteServer(completionHandler:@escaping (DataProviderUpdateModelResult) -> Void)
-}
-
-enum DataProviderUpdateModelResult {
-    case success ([PersonModelContoller])
-    case failure (Error)
-}
-
 class ApplicationModel {
 
     // MARK: - Properties -
