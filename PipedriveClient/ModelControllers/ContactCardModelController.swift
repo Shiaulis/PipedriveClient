@@ -8,9 +8,21 @@
 
 import Foundation
 
-class ContactCardModelController {
+struct ContactCardModelController {
 
     // MARK: - Properties -
+
+    var value: String {
+        return contactCard.value ?? ""
+    }
+
+    var label: String {
+        return contactCard.label ?? ""
+    }
+
+    var isPrimary: Bool {
+        return contactCard.primary ?? false
+    }
 
     private let contactCard: ContactCard
 

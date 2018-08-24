@@ -68,6 +68,19 @@ class PersonDetailsViewController: UIViewController {
         return label
     }()
 
+    private lazy var contactDetailsLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.preferredFont(forTextStyle: .caption1)
+        label.adjustsFontForContentSizeCategory = true
+        label.textColor = .gray
+        label.textAlignment = .natural
+        label.numberOfLines = 1
+        label.minimumScaleFactor = 0.2
+        label.adjustsFontSizeToFitWidth = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
     // MARK: - Initialization -
 
     init(using viewModel: PersonDetailsViewModel) {
@@ -127,6 +140,32 @@ class PersonDetailsViewController: UIViewController {
         organizationNameLabel.topAnchor.constraint(equalTo: personNameLabel.bottomAnchor, constant: 8).isActive = true
         lowestView = organizationNameLabel
 
+        if viewModel.shouldPresentContactsSection {
+
+            addSeparator(lowestView: &lowestView, distanceFromLowestView: 24)
+
+            contactDetailsLabel.text = NSLocalizedString("CONTACT DETAILS", comment: "label for contacts section in details view")
+            containerView.addSubview(contactDetailsLabel)
+            contactDetailsLabel.leadingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.leadingAnchor, constant: PersonDetailsViewController.offset).isActive = true
+            contactDetailsLabel.trailingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.trailingAnchor, constant: -PersonDetailsViewController.offset).isActive = true
+            contactDetailsLabel.topAnchor.constraint(equalTo: lowestView.bottomAnchor, constant: 8).isActive = true
+            lowestView = contactDetailsLabel
+
+            for contactCardViewModel in viewModel.contactCardViewModels {
+                let contactCardView = ContactCardView(using: contactCardViewModel)
+
+                containerView.addSubview(contactCardView)
+                contactCardView.leadingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.leadingAnchor,
+                                                             constant: PersonDetailsViewController.offset).isActive = true
+                contactCardView.trailingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.trailingAnchor,
+                                                              constant: -PersonDetailsViewController.offset).isActive = true
+                contactCardView.topAnchor.constraint(equalTo: lowestView.bottomAnchor, constant: 8).isActive = true
+                lowestView = contactCardView
+            }
+
+
+        }
+
         lowestView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -8).isActive = true
     }
 
@@ -135,7 +174,7 @@ class PersonDetailsViewController: UIViewController {
         lineView.backgroundColor = .gray
         lineView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(lineView)
-        lineView.heightAnchor.constraint(equalToConstant: 0.4).isActive = true
+        lineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         lineView.topAnchor.constraint(equalTo: lowestView.bottomAnchor, constant: distanceFromLowestView).isActive = true
         lineView.leadingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.leadingAnchor, constant: PersonDetailsViewController.offset).isActive = true
         lineView.trailingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.trailingAnchor, constant: -PersonDetailsViewController.offset).isActive = true

@@ -20,6 +20,22 @@ struct PersonDetailsViewModel {
         return modelController.organizationDisplayName
     }
 
+    var shouldPresentContactsSection: Bool {
+        return contactCardViewModels.count > 0
+    }
+
+    var contactCardViewModels: [ContactCardViewModel] {
+        return emailContactCardViewModels + phoneContactCardViewModels
+    }
+
+    private var emailContactCardViewModels: [ContactCardViewModel] {
+        return modelController.emailContactCardModelControllers.map({ContactCardViewModel(using: $0)})
+    }
+
+    private var phoneContactCardViewModels: [ContactCardViewModel] {
+        return modelController.phoneContactCardModelControllers.map({ContactCardViewModel(using: $0)})
+    }
+
     private let modelController: PersonModelContoller
 
     // MARK: - Initialization -
