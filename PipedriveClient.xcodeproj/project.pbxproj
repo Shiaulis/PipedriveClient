@@ -24,7 +24,6 @@
 		0996552D212FEA790092D707 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0996552C212FEA790092D707 /* DataProvider.swift */; };
 		09A011732129EA7E003EBD5B /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* RequestBuilder.swift */; };
 		09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */; };
-		09CC447B212D26410091F366 /* PipedriveNavitagionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */; };
 		09CF8058212F0C4D0059CF3B /* ContactCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF8057212F0C4D0059CF3B /* ContactCardViewModel.swift */; };
 		09CF805A212F0C770059CF3B /* PersonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF8059212F0C770059CF3B /* PersonCellViewModel.swift */; };
 		09CF805C212F0FDF0059CF3B /* ContactCardModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF805B212F0FDF0059CF3B /* ContactCardModelController.swift */; };
@@ -76,7 +75,6 @@
 		0996552C212FEA790092D707 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		09A011722129EA7E003EBD5B /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcher.swift; sourceTree = "<group>"; };
-		09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipedriveNavitagionController.swift; sourceTree = "<group>"; };
 		09CF8057212F0C4D0059CF3B /* ContactCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardViewModel.swift; sourceTree = "<group>"; };
 		09CF8059212F0C770059CF3B /* PersonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellViewModel.swift; sourceTree = "<group>"; };
 		09CF805B212F0FDF0059CF3B /* ContactCardModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardModelController.swift; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 		09CC4479212D26150091F366 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */,
 				09E1F325212937230049988C /* PersonsListViewController.swift */,
 				092D0A91212E6F230045DA41 /* PersonDetailsViewController.swift */,
 			);
@@ -402,7 +399,6 @@
 			files = (
 				093F6E51212C4E4900B6AB68 /* CacheStorage.swift in Sources */,
 				092D0A92212E6F230045DA41 /* PersonDetailsViewController.swift in Sources */,
-				09CC447B212D26410091F366 /* PipedriveNavitagionController.swift in Sources */,
 				0941EA54212DE73800386435 /* ContactCard.swift in Sources */,
 				09886468212DBBC600A8E07C /* PersonsListViewModel.swift in Sources */,
 				0975F9FD212B2287002543CD /* DataMapper.swift in Sources */,

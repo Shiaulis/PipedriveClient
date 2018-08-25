@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let viewModel = PersonsListViewModel.init(using: applicationModel)
         let rootViewController = PersonsListViewController(using: viewModel)
-        let navigationController = PipedriveNavitagionController.init(rootViewController: rootViewController)
+        let navigationController = UINavigationController(rootViewController: rootViewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         return true

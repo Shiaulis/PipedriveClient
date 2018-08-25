@@ -106,6 +106,7 @@ class PersonsListViewController: UITableViewController {
 
     private func setupNavigationBar() {
         navigationItem.title = PersonsListViewController.controllerTitle
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     private func setupTableView() {
