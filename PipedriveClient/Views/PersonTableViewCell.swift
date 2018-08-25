@@ -37,7 +37,7 @@ class PersonTableViewCell: UITableViewCell {
 
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.preferredFont(forTextStyle: .callout)
+        label.font = UIFont.preferredFont(forTextStyle: .footnote)
         label.adjustsFontForContentSizeCategory = true
         label.textColor = .gray
         label.textAlignment = .natural
