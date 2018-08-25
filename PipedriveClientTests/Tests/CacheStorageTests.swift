@@ -10,18 +10,6 @@ import XCTest
 @testable import PipedriveClient
 
 class CacheStorageTests: XCTestCase {
-    func testCache_createCacheForAllPersonsRequest() {
-        let cache = CacheStorage(queue: .global(qos: .background), fileManager: TestFileManager())
-        let expectation = XCTestExpectation.init(description: "completionHandlerExpectation")
-        cache.cache(data: TestFileManager.successfullyCreatedFileContent,
-                    forCategory: .allPersons) { (error) in
-                        XCTAssertNil(error)
-                        expectation.fulfill()
-
-        }
-
-        wait(for: [expectation], timeout: 5)
-    }
 
     func testCache_readFromCacheForAllPersonsRequest() {
         let cache = CacheStorage.init(queue: .global(qos: .background), fileManager: TestFileManager())

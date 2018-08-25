@@ -57,12 +57,8 @@ class RemoteDataFetcherTests: XCTestCase {
                 XCTFail()
 
             case .failure(let error):
-
-                guard let receivedError = error else {
-                    XCTAssertNotNil(error)
-                    return
-                }
-                XCTAssertEqual(receivedError as NSError, RemoteDataFetcherTests.testError)
+                XCTAssertNotNil(error)
+                XCTAssertEqual(error as NSError, RemoteDataFetcherTests.testError)
             }
         }
     }
