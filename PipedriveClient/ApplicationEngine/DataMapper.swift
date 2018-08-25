@@ -16,7 +16,7 @@ class DataMapper {
 
     // MARK: - Properties -
 
-    static private let logger = OSLog.init(subsystem: LogSubsystem.applicationModel, object: DataMapper.self)
+    static private let logger = OSLog(subsystem: LogSubsystem.applicationModel, object: DataMapper.self)
 
     private let queue: DispatchQueue
     private let decoder: JSONDecoder
@@ -25,7 +25,7 @@ class DataMapper {
 
     init(queue: DispatchQueue) {
         self.queue = queue
-        self.decoder = JSONDecoder.init()
+        self.decoder = JSONDecoder()
     }
 
     func decodePersons(from data: Data) throws -> [PersonModelContoller] {

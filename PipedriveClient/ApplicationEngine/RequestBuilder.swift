@@ -28,18 +28,18 @@ class RequestBuilder {
             return nil
         }
         self.baseURL = url
-        self.apiTokenQueryItem = URLQueryItem.init(name: "api_token", value: token)
+        self.apiTokenQueryItem = URLQueryItem(name: "api_token", value: token)
     }
 
     // MARK: - Public methods -
 
     func createURL(for endpoint: Endpoint, pagination: Pagination = Pagination.defaultPagination, otherQueryItems:[URLQueryItem]? = nil) -> URL? {
-        guard let endpointURL = URL.init(string: endpoint.path, relativeTo: baseURL) else {
+        guard let endpointURL = URL(string: endpoint.path, relativeTo: baseURL) else {
             assertionFailure()
             return nil
         }
 
-        guard var urlComponents = URLComponents.init(url: endpointURL, resolvingAgainstBaseURL: true) else {
+        guard var urlComponents = URLComponents(url: endpointURL, resolvingAgainstBaseURL: true) else {
             assertionFailure()
             return nil
         }
@@ -69,12 +69,12 @@ enum Endpoint {
 struct Pagination {
     private let startQueryItem: URLQueryItem
     private let limitQueryItem: URLQueryItem?
-    static let defaultPagination = Pagination.init(start: 0)
+    static let defaultPagination = Pagination(start: 0)
 
     init(start: UInt, limit: UInt = 0) {
-        self.startQueryItem = URLQueryItem.init(name: "start", value: String(start))
+        self.startQueryItem = URLQueryItem(name: "start", value: String(start))
         if limit > 0 {
-            self.limitQueryItem = URLQueryItem.init(name: "limit", value: String(limit))
+            self.limitQueryItem = URLQueryItem(name: "limit", value: String(limit))
         }
         else {
             self.limitQueryItem = nil

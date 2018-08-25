@@ -19,7 +19,7 @@ class ApplicationModel {
     // below your own companyName and token
     static private let companyName = "andriusinc"
     static private let token = "d95b2a784b544f23d9ccb4c3eae9b879c91225c1"
-    static private let logger = OSLog.init(subsystem: LogSubsystem.applicationModel, object: ApplicationModel.self)
+    static private let logger = OSLog(subsystem: LogSubsystem.applicationModel, object: ApplicationModel.self)
 
     private let requestBuilder: RequestBuilder?
     private let remoteDataFetcher: RemoteDataFetcher
@@ -31,17 +31,17 @@ class ApplicationModel {
     // MARK: - Initialization -
 
     init() {
-        self.requestBuilder = RequestBuilder.init(usingURLScheme: ApplicationModel.urlScheme,
+        self.requestBuilder = RequestBuilder(usingURLScheme: ApplicationModel.urlScheme,
                                                   companyName: ApplicationModel.companyName,
                                                   apiVersion: ApplicationModel.apiVersion,
                                                   token: ApplicationModel.token)
-        self.remoteDataFetcher = RemoteDataFetcher.init(using: DispatchQueue.global(qos: .userInteractive),
+        self.remoteDataFetcher = RemoteDataFetcher(using: DispatchQueue.global(qos: .userInteractive),
                                                         networkProvider: URLSessionBasedNetworkProvider())
-        self.dataMapper = DataMapper.init(queue: .global(qos: .userInteractive))
+        self.dataMapper = DataMapper(queue: .global(qos: .userInteractive))
 
         do {
             let fileManager = try SystemLocalFileManager()
-            self.cacheStorage = CacheStorage.init(queue: .global(qos: .userInitiated), fileManager: fileManager)
+            self.cacheStorage = CacheStorage(queue: .global(qos: .userInitiated), fileManager: fileManager)
         } catch {
             os_log("Failed to initiate cache storage. Error: '%@'", log: ApplicationModel.logger, type: .error, error.localizedDescription)
             self.cacheStorage = nil

@@ -53,7 +53,7 @@ class TestFileManager: LocalFileManager {
     }
 
     var cacheDirectoryURL: URL {
-        return URL.init(string: TestFileManager.cacheDirectoryPath)!
+        return URL(string: TestFileManager.cacheDirectoryPath)!
     }
 }
 

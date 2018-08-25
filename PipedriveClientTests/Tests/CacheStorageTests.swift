@@ -12,8 +12,8 @@ import XCTest
 class CacheStorageTests: XCTestCase {
 
     func testCache_readFromCacheForAllPersonsRequest() {
-        let cache = CacheStorage.init(queue: .global(qos: .background), fileManager: TestFileManager())
-        let expectation = XCTestExpectation.init(description: "completionHandlerExpectation")
+        let cache = CacheStorage(queue: .global(qos: .background), fileManager: TestFileManager())
+        let expectation = XCTestExpectation(description: "completionHandlerExpectation")
         cache.readData(forCategory: .allPersons) { (cacheReadResult) in
             switch cacheReadResult {
             case .success (let data):

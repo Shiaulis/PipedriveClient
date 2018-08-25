@@ -33,7 +33,7 @@ class CacheStorage {
 
     // MARK: - Properties -
 
-    static private let logger = OSLog.init(subsystem: LogSubsystem.applicationModel, object: CacheStorage.self)
+    static private let logger = OSLog(subsystem: LogSubsystem.applicationModel, object: CacheStorage.self)
 
     // Private
     private let dispatchQueue: DispatchQueue

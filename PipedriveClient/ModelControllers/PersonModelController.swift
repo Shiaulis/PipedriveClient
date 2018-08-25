@@ -59,7 +59,7 @@ class PersonModelContoller {
         var modelControllers: [ContactCardModelController] = []
         if let contactCards = contactCards {
             for contactCard in contactCards {
-                if let modelController = ContactCardModelController.init(using: contactCard) {
+                if let modelController = ContactCardModelController(using: contactCard) {
                     modelControllers.append(modelController)
                 }
             }

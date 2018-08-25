@@ -18,7 +18,7 @@ class RemoteDataFetcher {
 
     // MARK: - Properties -
 
-    static private let logger = OSLog.init(subsystem: LogSubsystem.applicationModel, object: RemoteDataFetcher.self)
+    static private let logger = OSLog(subsystem: LogSubsystem.applicationModel, object: RemoteDataFetcher.self)
     private let queue: DispatchQueue
     private let networkProvider: NetworkProvider
 
@@ -81,7 +81,7 @@ class URLSessionBasedNetworkProvider: NetworkProvider {
     // MARK: - Initialization -
 
     init() {
-        self.urlSession = URLSession.init(configuration: .default)
+        self.urlSession = URLSession(configuration: .default)
     }
 
     // MARK: - Network provider methods -

@@ -18,7 +18,7 @@ class RequestBuilderTests: XCTestCase {
     static private let getAllPersonsURLExpectation = "https://api.pipedrive.com/v1/persons?start=0&api_token=d95b2a784b544f23d9ccb4c3eae9b879c91225c1"
 
     func testBuilder_createRequestBuilder() {
-        let requestBuilder = RequestBuilder.init(usingURLScheme: RequestBuilderTests.testURLScheme,
+        let requestBuilder = RequestBuilder(usingURLScheme: RequestBuilderTests.testURLScheme,
                                                  companyName: RequestBuilderTests.companyName,
                                                  apiVersion: RequestBuilderTests.apiVersion,
                                                  token: RequestBuilderTests.token)
@@ -26,7 +26,7 @@ class RequestBuilderTests: XCTestCase {
     }
 
     func testBuilder_createRequest() {
-        let requestBuilder = RequestBuilder.init(usingURLScheme: RequestBuilderTests.testURLScheme,
+        let requestBuilder = RequestBuilder(usingURLScheme: RequestBuilderTests.testURLScheme,
                                                  companyName: RequestBuilderTests.companyName,
                                                  apiVersion: RequestBuilderTests.apiVersion,
                                                  token: RequestBuilderTests.token)

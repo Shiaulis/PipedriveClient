@@ -13,6 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Properties -
+
     private let window: UIWindow
     private let applicationModel: ApplicationModel
 
@@ -25,10 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - AppDelegate callbacks -
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         applicationModel.setup()
 
-        let viewModel = PersonsListViewModel.init(using: applicationModel)
+        let viewModel = PersonsListViewModel(using: applicationModel)
         let rootViewController = PersonsListViewController(using: viewModel)
         let navigationController = UINavigationController(rootViewController: rootViewController)
         window.rootViewController = navigationController
@@ -36,4 +38,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-

@@ -36,7 +36,7 @@ class PersonDetailsViewController: UIViewController {
     }()
 
     private let personImageView: UIImageView = {
-        let imaveView = UIImageView.init(image: #imageLiteral(resourceName: "PersonIcon"))
+        let imaveView = UIImageView(image: #imageLiteral(resourceName: "PersonIcon"))
         imaveView.contentMode = .scaleAspectFit
         imaveView.translatesAutoresizingMaskIntoConstraints = false
         return imaveView
@@ -170,7 +170,7 @@ class PersonDetailsViewController: UIViewController {
     }
 
     private func addSeparator(lowestView: inout UIView, distanceFromLowestView: CGFloat) {
-        let lineView = UIView.init(frame: .zero)
+        let lineView = UIView(frame: .zero)
         lineView.backgroundColor = .gray
         lineView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(lineView)
