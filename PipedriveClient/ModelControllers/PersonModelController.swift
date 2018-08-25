@@ -65,6 +65,5 @@ class PersonModelContoller {
             }
         }
         return modelControllers
-
     }
 }

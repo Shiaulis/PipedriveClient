@@ -72,7 +72,7 @@ class ApplicationModel {
         })
     }
 
-    func requestAppPersonsList(completionHandler:@escaping (DataProviderUpdateModelResult) -> Void) {
+    private func requestAppPersonsList(completionHandler:@escaping (DataProviderUpdateModelResult) -> Void) {
         // 1. Create request URL
         guard let url = requestBuilder?.createURL(for: .person) else {
             os_log("Failed to create url for all persons list request", log: ApplicationModel.logger, type: .error)
