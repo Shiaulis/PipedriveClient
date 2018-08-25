@@ -28,7 +28,10 @@ struct ContactCardModelController {
 
     // MARK: - Initialization -
 
-    init(using contactCard: ContactCard) {
+    init?(using contactCard: ContactCard) {
+        if let contactCardValue = contactCard.value, contactCardValue.count < 1 {
+            return nil
+        }
         self.contactCard = contactCard
     }
 }

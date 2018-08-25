@@ -53,14 +53,15 @@ class PersonModelContoller {
         self.person = person
     }
 
-    // MARK: - Private merhods -
+    // MARK: - Private methods -
 
     private func contactCardModelControllers(for contactCards:[ContactCard]?) -> [ContactCardModelController] {
         var modelControllers: [ContactCardModelController] = []
         if let contactCards = contactCards {
             for contactCard in contactCards {
-                let modelController = ContactCardModelController.init(using: contactCard)
-                modelControllers.append(modelController)
+                if let modelController = ContactCardModelController.init(using: contactCard) {
+                    modelControllers.append(modelController)
+                }
             }
         }
         return modelControllers
