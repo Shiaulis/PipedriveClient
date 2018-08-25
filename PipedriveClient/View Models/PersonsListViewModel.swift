@@ -41,7 +41,7 @@ class PersonsListViewModel {
 
     init(using dataProvider: DataProvider) {
         self.dataProvider = dataProvider
-        self.personModelControllers = []
+        self.personModelControllers = dataProvider.initialPersonsList
     }
 
     // MARK: - Public methods -

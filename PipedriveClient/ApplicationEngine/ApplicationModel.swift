@@ -132,6 +132,10 @@ class ApplicationModel {
 }
 
 extension ApplicationModel: DataProvider {
+    var initialPersonsList: [PersonModelContoller] {
+        return personModelControllers
+    }
+
     func updatePersonsModelsFromRemoteServer(completionHandler: @escaping (DataProviderUpdateModelResult) -> Void) {
         requestAppPersonsList(completionHandler: completionHandler)
     }

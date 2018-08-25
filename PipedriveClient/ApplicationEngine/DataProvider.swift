@@ -12,6 +12,7 @@ import Foundation
  Encapsulates all application model logic for UI
  */
 protocol DataProvider {
+    var initialPersonsList: [PersonModelContoller] { get }
     func updatePersonsModelsFromRemoteServer(completionHandler:@escaping (DataProviderUpdateModelResult) -> Void)
 }
 
