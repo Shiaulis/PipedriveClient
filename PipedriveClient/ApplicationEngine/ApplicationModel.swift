@@ -12,7 +12,7 @@ import os.log
 class ApplicationModel {
 
     // MARK: - Properties -
-    static let serverDomain = "pipedrive.com"
+    
     static private let urlScheme = "http"
     static private let apiVersion = "v1"
     // To check app in your own enviroment just paste
@@ -25,7 +25,6 @@ class ApplicationModel {
     private let remoteDataFetcher: RemoteDataFetcher
     private let dataMapper: DataMapper
     private let cacheStorage: CacheStorage?
-    private let keychainStorage: KeychainStorage
 
     private var personModelControllers:[PersonModelContoller]
 
@@ -47,7 +46,6 @@ class ApplicationModel {
             os_log("Failed to initiate cache storage. Error: '%@'", log: ApplicationModel.logger, type: .error, error.localizedDescription)
             self.cacheStorage = nil
         }
-        self.keychainStorage = KeychainStorage()
 
         self.personModelControllers = []
     }
@@ -129,23 +127,6 @@ class ApplicationModel {
             os_log("Failed to parse data. Error: '%@'", log: ApplicationModel.logger, type: .error, error.localizedDescription)
             assertionFailure()
             completionHandler(nil)
-        }
-    }
-
-    private func store(credentials: Credentials) {
-        do {
-            try keychainStorage.store(credentials: credentials, for: ApplicationModel.serverDomain)
-        } catch {
-            os_log("Failed to store credentials in keychain. Error: '%@'", log: ApplicationModel.logger, type: .error, error.localizedDescription)
-        }
-    }
-
-    private func storedCredentials() -> Credentials? {
-        do {
-            return try keychainStorage.restoreCredentials(for: ApplicationModel.serverDomain)
-        } catch {
-            os_log("Failed to restore credentials from keychain. Error: '%@'", log: ApplicationModel.logger, type: .error, error.localizedDescription)
-            return nil
         }
     }
 }

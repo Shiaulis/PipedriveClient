@@ -24,7 +24,6 @@
 		0996552D212FEA790092D707 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0996552C212FEA790092D707 /* DataProvider.swift */; };
 		09A011732129EA7E003EBD5B /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* RequestBuilder.swift */; };
 		09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */; };
-		09C4741421319A9900CCC13D /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4741321319A9900CCC13D /* KeychainStorage.swift */; };
 		09CC447B212D26410091F366 /* PipedriveNavitagionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */; };
 		09CF8058212F0C4D0059CF3B /* ContactCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF8057212F0C4D0059CF3B /* ContactCardViewModel.swift */; };
 		09CF805A212F0C770059CF3B /* PersonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF8059212F0C770059CF3B /* PersonCellViewModel.swift */; };
@@ -77,7 +76,6 @@
 		0996552C212FEA790092D707 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		09A011722129EA7E003EBD5B /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcher.swift; sourceTree = "<group>"; };
-		09C4741321319A9900CCC13D /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
 		09CC447A212D26410091F366 /* PipedriveNavitagionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipedriveNavitagionController.swift; sourceTree = "<group>"; };
 		09CF8057212F0C4D0059CF3B /* ContactCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardViewModel.swift; sourceTree = "<group>"; };
 		09CF8059212F0C770059CF3B /* PersonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellViewModel.swift; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 				0975F9FC212B2287002543CD /* DataMapper.swift */,
 				093F6E50212C4E4900B6AB68 /* CacheStorage.swift */,
 				0911A05E212C9BE200D4C063 /* LocalFileManager.swift */,
-				09C4741321319A9900CCC13D /* KeychainStorage.swift */,
 			);
 			path = ApplicationEngine;
 			sourceTree = "<group>";
@@ -420,7 +417,6 @@
 				09472852212BD1C6000E9CE4 /* PersonModelController.swift in Sources */,
 				09472850212BD142000E9CE4 /* Person.swift in Sources */,
 				09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */,
-				09C4741421319A9900CCC13D /* KeychainStorage.swift in Sources */,
 				09886465212DB2A300A8E07C /* PersonTableViewCell.swift in Sources */,
 				09CF8060212F4AE00059CF3B /* ContactCardView.swift in Sources */,
 				09CF8058212F0C4D0059CF3B /* ContactCardViewModel.swift in Sources */,
