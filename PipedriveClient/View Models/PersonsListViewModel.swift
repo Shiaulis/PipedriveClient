@@ -41,7 +41,7 @@ class PersonsListViewModel {
 
     init(using dataProvider: DataProvider) {
         self.dataProvider = dataProvider
-        self.personModelControllers = dataProvider.initialPersonsList
+        self.personModelControllers = dataProvider.initialPersonsList.sorted()
     }
 
     // MARK: - Public methods -
@@ -53,7 +53,7 @@ class PersonsListViewModel {
             case .failure(let error):
                 self.alertMessage = error.localizedDescription
             case .success (let personModelControllers):
-                self.personModelControllers = personModelControllers
+                self.personModelControllers = personModelControllers.sorted()
             }
         }
     }

@@ -67,3 +67,15 @@ class PersonModelContoller {
         return modelControllers
     }
 }
+
+extension PersonModelContoller: Equatable {
+    static func == (lhs: PersonModelContoller, rhs: PersonModelContoller) -> Bool {
+        return lhs.displayName.lowercased() == rhs.displayName.lowercased()
+    }
+}
+
+extension PersonModelContoller: Comparable {
+    static func < (lhs: PersonModelContoller, rhs: PersonModelContoller) -> Bool {
+        return lhs.displayName.lowercased() < rhs.displayName.lowercased()
+    }
+}
