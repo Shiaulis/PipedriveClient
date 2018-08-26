@@ -15,22 +15,22 @@ enum RemoteRequestResult {
 }
 
 class RemoteDataFetcher {
-
+    
     // MARK: - Properties -
-
+    
     static private let logger = OSLog(subsystem: LogSubsystem.applicationModel, object: RemoteDataFetcher.self)
     private let queue: DispatchQueue
     private let networkProvider: NetworkProvider
-
+    
     // MARK: - Initialization -
-
+    
     init(using queue:DispatchQueue, networkProvider: NetworkProvider) {
         self.queue = queue
         self.networkProvider = networkProvider
     }
-
+    
     // MARK: - Public methods -
-
+    
     func performRequest(using url: URL, completionHandler: @escaping (RemoteRequestResult) -> Void) {
         queue.async { [weak self] in
             os_log("Request for data at url '%@' started.", log: RemoteDataFetcher.logger, type: .debug, url.absoluteString)
@@ -44,19 +44,19 @@ class RemoteDataFetcher {
                     completionHandler(result);
                     return
                 }
-
+                
                 guard let receivedData = data, receivedData.count > 0 else {
                     os_log("Failed to get data from request for URL '%@'. Response: '%@'",
                            log: RemoteDataFetcher.logger,
                            type: .error,
                            url.absoluteString, response ?? "")
-
+                    
                     let result = RemoteRequestResult.failure(RemoteDataFetcherError.unknownError)
                     assertionFailure()
                     completionHandler(result);
                     return
                 }
-
+                
                 os_log("Request for url '%@' succeeded.", log: RemoteDataFetcher.logger, type: .debug, url.absoluteString)
                 let result = RemoteRequestResult.success(receivedData)
                 completionHandler(result)
@@ -73,21 +73,21 @@ protocol NetworkProvider {
 }
 
 class URLSessionBasedNetworkProvider: NetworkProvider {
-
+    
     // MARK: - Properties -
-
+    
     private let urlSession: URLSession
-
+    
     // MARK: - Initialization -
-
+    
     init() {
         self.urlSession = URLSession(configuration: .default)
     }
-
+    
     // MARK: - Network provider methods -
-
+    
     func performDataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         urlSession.dataTask(with: url, completionHandler: completionHandler).resume()
     }
-
+    
 }

@@ -30,20 +30,20 @@ enum CacheReadResult {
 
 
 class CacheStorage {
-
+    
     // MARK: - Properties -
-
+    
     static private let logger = OSLog(subsystem: LogSubsystem.applicationModel, object: CacheStorage.self)
-
+    
     // Private
     private let dispatchQueue: DispatchQueue
     private let fileManager: LocalFileManager
     private let destinationCacheDirectoryURL: URL
     private var runtimeCache: [CacheCategory:Data]
-
-
+    
+    
     // MARK: - Initialization -
-
+    
     init(queue: DispatchQueue, fileManager: LocalFileManager) {
         self.fileManager = fileManager
         self.destinationCacheDirectoryURL = fileManager.cacheDirectoryURL
@@ -51,10 +51,10 @@ class CacheStorage {
         self.runtimeCache = [:]
         getDataFromPersistentToRuntimeStorage()
     }
-
+    
     // MARK: - Public methods -
-
-
+    
+    
     func readData(forCategory category: CacheCategory, completionHandler:(CacheReadResult) -> Void) {
         if let dataFromRuntimeCache = dataFromRuntimeCache(for: .allPersons) {
             completionHandler(.success(dataFromRuntimeCache))
@@ -70,47 +70,47 @@ class CacheStorage {
             }
         }
     }
-
+    
     func cache(data: Data, for category: CacheCategory) {
         saveDataToRuntimeCache(data: data, for: category)
         saveDataToPersistentCache(data: data, forCategory: category)
     }
-
+    
     // MARK: - Private methods -
-
+    
     private func generateURL(for category: CacheCategory) -> URL {
         switch category {
         case .allPersons: return destinationCacheDirectoryURL.appendingPathComponent(CacheCategory.allPersons.name, isDirectory: true)
         }
     }
-
+    
     // MARK: Runtime cache methods
-
+    
     private func dataFromRuntimeCache(for category: CacheCategory) -> Data? {
         return dispatchQueue.sync { [weak self] in
             return self?.runtimeCache[category]
         }
     }
-
+    
     private func saveDataToRuntimeCache(data: Data, for category: CacheCategory) {
         dispatchQueue.sync { [weak self] in
             self?.runtimeCache[category] = data
         }
     }
-
+    
     // MARK: Persistent cache methods
-
+    
     private func getDataFromPersistentToRuntimeStorage() {
         let category: CacheCategory = .allPersons
         fillRuntimeStorageWithDataFromPersistentStorageIfPossible(for: category)
     }
-
+    
     private func fillRuntimeStorageWithDataFromPersistentStorageIfPossible(for category: CacheCategory) {
         if isPersistentDataExist(for: category) == false {
             os_log("No cache file for category '%@' found", log: CacheStorage.logger, type: .default, category.name)
             return
         }
-
+        
         readDataFromPersistentCache(for: category) { (cacheReadResult) in
             switch cacheReadResult {
             case .failure(let error):
@@ -125,7 +125,7 @@ class CacheStorage {
             }
         }
     }
-
+    
     private func saveDataToPersistentCache(data: Data, forCategory category: CacheCategory) {
         dispatchQueue.sync { [weak self] in
             guard let strongSelf = self else {
@@ -147,26 +147,26 @@ class CacheStorage {
             }
         }
     }
-
+    
     private func readDataFromPersistentCache(for category: CacheCategory, completionHandler:(CacheReadResult) -> Void) {
         dispatchQueue.sync { [weak self] in
             guard let strongSelf = self else {
                 assertionFailure()
                 return
             }
-
+            
             if strongSelf.isPersistentDataExist(for: category) == false {
                 assertionFailure("We should check the information before calling this methods")
                 completionHandler(.failure(CacheStorageError.cacheDataDoesntExist))
                 return
             }
-
+            
             let url = strongSelf.generateURL(for: category)
             if strongSelf.fileManager.fileExists(at: url) == false {
                 completionHandler(.failure(CacheStorageError.cacheDataDoesntExist))
                 return
             }
-
+            
             do {
                 guard let data = try strongSelf.fileManager.contentOfFile(at: url) else {
                     completionHandler(.failure(CacheStorageError.failedToReadDataFromFile))
@@ -179,7 +179,7 @@ class CacheStorage {
             }
         }
     }
-
+    
     private func isPersistentDataExist(for category: CacheCategory) -> Bool {
         return dispatchQueue.sync {
             let url = generateURL(for: category)

@@ -32,11 +32,11 @@ class ApplicationModel {
 
     init() {
         self.requestBuilder = RequestBuilder(usingURLScheme: ApplicationModel.urlScheme,
-                                                  companyName: ApplicationModel.companyName,
-                                                  apiVersion: ApplicationModel.apiVersion,
-                                                  token: ApplicationModel.token)
+                                             companyName: ApplicationModel.companyName,
+                                             apiVersion: ApplicationModel.apiVersion,
+                                             token: ApplicationModel.token)
         self.remoteDataFetcher = RemoteDataFetcher(using: DispatchQueue.global(qos: .userInteractive),
-                                                        networkProvider: URLSessionBasedNetworkProvider())
+                                                   networkProvider: URLSessionBasedNetworkProvider())
         self.dataMapper = DataMapper(queue: .global(qos: .userInteractive))
 
         do {
