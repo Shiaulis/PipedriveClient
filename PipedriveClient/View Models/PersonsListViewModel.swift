@@ -15,12 +15,17 @@ class PersonsListViewModel {
     var showAlertBlock: (() -> Void)?
     var updateLoadingStatus: (() -> Void)?
     var reloadTableViewBlock: (() -> Void)?
+    var updatePlaceholderViewStatusBlock: (() -> Void)?
 
     var isLoading: Bool = false {
         didSet {
             self.updateLoadingStatus?()
         }
     }
+    var shouldPresentPlaceholder: Bool {
+        return personModelControllers.count == 0
+    }
+
     var alertMessage: String? {
         didSet {
             self.showAlertBlock?()
@@ -34,6 +39,7 @@ class PersonsListViewModel {
     private var personModelControllers: [PersonModelContoller] {
         didSet {
             self.reloadTableViewBlock?()
+            self.updatePlaceholderViewStatusBlock?()
         }
     }
 

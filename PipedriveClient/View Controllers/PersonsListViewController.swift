@@ -70,8 +70,18 @@ class PersonsListViewController: UITableViewController {
 
     // MARK: - Private methods -
 
+    private func presentPlaceholderViewIfNeeded() {
+        let shouldPresentPlaceholder = viewModel.shouldPresentPlaceholder ?? false
+        if shouldPresentPlaceholder {
+            tableView.backgroundView = PlaceholderView()
+        }
+        else {
+            tableView.backgroundView = nil
+        }
+    }
+
     private func setupViewModel() {
-        viewModel.showAlertBlock = { [weak self] () in
+        viewModel.showAlertBlock = { [weak self] in
             DispatchQueue.main.async {
                 if let message = self?.viewModel.alertMessage {
                     self?.showAlert( message )
@@ -79,7 +89,7 @@ class PersonsListViewController: UITableViewController {
             }
         }
 
-        viewModel.updateLoadingStatus = { [weak self] () in
+        viewModel.updateLoadingStatus = { [weak self] in
             DispatchQueue.main.async {
                 let isLoading = self?.viewModel.isLoading ?? false
                 if isLoading {
@@ -89,6 +99,13 @@ class PersonsListViewController: UITableViewController {
                     self?.tableView.refreshControl?.endRefreshing()
                 }
             }
+        }
+
+        viewModel.updatePlaceholderViewStatusBlock = { [weak self] in
+            DispatchQueue.main.async {
+                self?.presentPlaceholderViewIfNeeded()
+            }
+
         }
 
         viewModel.reloadTableViewBlock = { [weak self] () in
@@ -114,6 +131,8 @@ class PersonsListViewController: UITableViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControllPulledAction), for: .valueChanged)
         tableView.refreshControl = refreshControl
+        tableView.tableFooterView = UIView()
+        presentPlaceholderViewIfNeeded()
     }
 
     // MARK: Targeted actions
