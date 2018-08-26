@@ -8,34 +8,21 @@
 
 import Foundation
 
-enum PersistentDataManagerError: Error {
-    case loadStoresFailed(error: Error?)
-    case saveContextFailed(error: Error?)
-}
-
-extension PersistentDataManagerError: LocalizedError {
-    var errorDescription: String? {
-        switch self {
-        case .loadStoresFailed(error: _):
-            return NSLocalizedString("Failed to load persistent storage", comment: "error description")
-        case .saveContextFailed(error: _):
-            return NSLocalizedString("Failed save data to persistent storage", comment: "error description")
-        }
-    }
-
-    var failureReason: String? {
-        switch self {
-        case .loadStoresFailed(let error):
-            return error?.localizedDescription ?? nil
-        case .saveContextFailed(let error):
-            return error?.localizedDescription ?? nil
-        }
-    }
-}
-
 enum DataMapperError: Error {
     case unknownError
     case detectedErrorMessageInsideJson(errorMessage: String)
+}
+
+extension DataMapperError: LocalizedError {
+    var localizedDescription: String {
+        switch self {
+        case .unknownError:
+            return NSLocalizedString("Failed to perform data mapping.", comment: "Data mapper error")
+        case .detectedErrorMessageInsideJson (let error):
+            return String(format: NSLocalizedString("Error is detected in response. Error: '%@'", comment: "Data mapper error") ,
+                error)
+        }
+    }
 }
 
 enum CacheStorageError: Error {
@@ -44,8 +31,30 @@ enum CacheStorageError: Error {
     case failedToCreateCacheFile
 }
 
+extension CacheStorageError: LocalizedError {
+    var localizedDescription: String {
+        switch self {
+        case .cacheDataDoesntExist:
+            return NSLocalizedString("Failed to find data in cache.", comment: "Cache storage error")
+        case .failedToReadDataFromFile:
+            return NSLocalizedString("Failed to read data from file.", comment: "Cache storage error")
+        case .failedToCreateCacheFile:
+            return NSLocalizedString("Failed to createn cache file.", comment: "Cache storage error")
+        }
+    }
+}
+
 enum SystemLocalFileManagerError: Error {
     case failedToDetectSystemCacheDirectory
+}
+
+extension SystemLocalFileManagerError: LocalizedError {
+    var localizedDescription: String {
+        switch self {
+        case .failedToDetectSystemCacheDirectory:
+            return NSLocalizedString("Failed to detect system cache directory.", comment: "File manager error")
+        }
+    }
 }
 
 enum ApplicationModelError: Error {
@@ -55,4 +64,13 @@ enum ApplicationModelError: Error {
 
 enum RemoteDataFetcherError: Error {
     case unknownError
+}
+
+extension RemoteDataFetcherError: LocalizedError {
+    var localizedDescription: String {
+        switch self {
+        case .unknownError:
+            return NSLocalizedString("Failed fetch the data from remote server.", comment: "Remote data fethcer error")
+        }
+    }
 }
