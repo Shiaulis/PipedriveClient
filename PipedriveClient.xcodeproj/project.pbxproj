@@ -24,6 +24,7 @@
 		0996552D212FEA790092D707 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0996552C212FEA790092D707 /* DataProvider.swift */; };
 		09A011732129EA7E003EBD5B /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A011722129EA7E003EBD5B /* RequestBuilder.swift */; };
 		09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */; };
+		09C474202133185200CCC13D /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4741F2133185200CCC13D /* PlaceholderView.swift */; };
 		09CF8058212F0C4D0059CF3B /* ContactCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF8057212F0C4D0059CF3B /* ContactCardViewModel.swift */; };
 		09CF805A212F0C770059CF3B /* PersonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF8059212F0C770059CF3B /* PersonCellViewModel.swift */; };
 		09CF805C212F0FDF0059CF3B /* ContactCardModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF805B212F0FDF0059CF3B /* ContactCardModelController.swift */; };
@@ -75,6 +76,7 @@
 		0996552C212FEA790092D707 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		09A011722129EA7E003EBD5B /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		09B3EFE02129DBC400BE7C0A /* RemoteDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataFetcher.swift; sourceTree = "<group>"; };
+		09C4741F2133185200CCC13D /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		09CF8057212F0C4D0059CF3B /* ContactCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardViewModel.swift; sourceTree = "<group>"; };
 		09CF8059212F0C770059CF3B /* PersonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellViewModel.swift; sourceTree = "<group>"; };
 		09CF805B212F0FDF0059CF3B /* ContactCardModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardModelController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			children = (
 				09886464212DB2A300A8E07C /* PersonTableViewCell.swift */,
 				09CF805F212F4AE00059CF3B /* ContactCardView.swift */,
+				09C4741F2133185200CCC13D /* PlaceholderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				09B3EFE12129DBC400BE7C0A /* RemoteDataFetcher.swift in Sources */,
 				09886465212DB2A300A8E07C /* PersonTableViewCell.swift in Sources */,
 				09CF8060212F4AE00059CF3B /* ContactCardView.swift in Sources */,
+				09C474202133185200CCC13D /* PlaceholderView.swift in Sources */,
 				09CF8058212F0C4D0059CF3B /* ContactCardViewModel.swift in Sources */,
 				0911A05F212C9BE200D4C063 /* LocalFileManager.swift in Sources */,
 				09CF805A212F0C770059CF3B /* PersonCellViewModel.swift in Sources */,
