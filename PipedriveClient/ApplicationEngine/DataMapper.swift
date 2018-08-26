@@ -35,12 +35,19 @@ class DataMapper {
         if let errorInsideJson = json.error {
             throw DataMapperError.detectedErrorMessageInsideJson(errorMessage: errorInsideJson)
         }
-        
-        guard let persons = json.responseData else {
-            throw DataMapperError.incorrectJsonFormat
+
+        guard json.success else {
+            throw DataMapperError.unknownError
         }
         
-        return persons.map( { PersonModelContoller(for: $0) } )
+        if let persons = json.responseData {
+            return persons.map( { PersonModelContoller(for: $0) } )
+        }
+        else {
+            // We assume that the data on server is empty
+            // if we reseive succeeded response with nil data
+            return []
+        }
     }
 }
 
@@ -76,8 +83,6 @@ private struct PersonsListResponse: Decodable {
         case errorInfo = "error_info"
     }
 }
-
-
 
 private struct AdditionalData: Decodable { }
 

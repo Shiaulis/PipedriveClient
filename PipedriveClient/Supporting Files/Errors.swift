@@ -34,7 +34,7 @@ extension PersistentDataManagerError: LocalizedError {
 }
 
 enum DataMapperError: Error {
-    case incorrectJsonFormat
+    case unknownError
     case detectedErrorMessageInsideJson(errorMessage: String)
 }
 
