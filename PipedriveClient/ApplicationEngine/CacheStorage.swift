@@ -60,6 +60,12 @@ class CacheStorage {
             completionHandler(.success(dataFromRuntimeCache))
             return
         }
+
+        if isPersistentDataExist(for: category) == false {
+            completionHandler(.failure(CacheStorageError.cacheDataDoesntExist))
+            return
+        }
+        
         readDataFromPersistentCache(for: category) { (cacheReadResult) in
             switch cacheReadResult {
             case .success(let data):
