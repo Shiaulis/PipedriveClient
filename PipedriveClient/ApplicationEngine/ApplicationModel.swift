@@ -15,10 +15,13 @@ class ApplicationModel {
     
     static private let urlScheme = "http"
     static private let apiVersion = "v1"
+    // ======================================================================
     // To check app in your own enviroment just paste
     // below your own companyName and token
     static private let companyName = "andriusinc"
     static private let token = "d95b2a784b544f23d9ccb4c3eae9b879c91225c1"
+    // ======================================================================
+
     static private let logger = OSLog(subsystem: LogSubsystem.applicationModel, object: ApplicationModel.self)
 
     private let requestBuilder: RequestBuilder?
