@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RequestParameters {
+struct RequestBuilderInitialParameters {
     let urlScheme: String
     let companyName: String
     let apiVersion: String
@@ -24,7 +24,7 @@ class RequestBuilder {
     
     // MARK: - Initializaion -
     
-    init?(using parameters: RequestParameters) {
+    init?(using parameters: RequestBuilderInitialParameters) {
         var urlComponents = URLComponents()
         urlComponents.scheme = parameters.urlScheme
         urlComponents.host = "\(parameters.companyName).pipedrive.com"
@@ -50,11 +50,19 @@ class RequestBuilder {
             assertionFailure()
             return nil
         }
-        
-        var queryItems = pagination.queryItems
+
+        var queryItems: [URLQueryItem]
         if let otherQueryItems = otherQueryItems {
-            queryItems.append(contentsOf: otherQueryItems)
+            queryItems = otherQueryItems
         }
+        else {
+            queryItems = []
+        }
+
+        if pagination.queryItems.count > 0 {
+            queryItems.append(contentsOf: pagination.queryItems)
+        }
+
         queryItems.append(apiTokenQueryItem)
         urlComponents.queryItems = queryItems
         

@@ -34,10 +34,10 @@ class ApplicationModel {
     // MARK: - Initialization -
 
     init() {
-        let parameters = RequestParameters(urlScheme: ApplicationModel.urlScheme,
-                                           companyName: ApplicationModel.companyName,
-                                           apiVersion: ApplicationModel.apiVersion,
-                                           token: ApplicationModel.token)
+        let parameters = RequestBuilderInitialParameters(urlScheme: ApplicationModel.urlScheme,
+                                                         companyName: ApplicationModel.companyName,
+                                                         apiVersion: ApplicationModel.apiVersion,
+                                                         token: ApplicationModel.token)
         self.requestBuilder = RequestBuilder(using: parameters)
         self.remoteDataFetcher = RemoteDataFetcher(using: .global(qos: .userInteractive),
                                                    networkProvider: URLSessionBasedNetworkProvider())
