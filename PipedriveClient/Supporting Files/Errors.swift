@@ -62,6 +62,17 @@ enum ApplicationModelError: Error {
     case fatalError
 }
 
+extension ApplicationModelError: LocalizedError {
+    var localizedDescription: String {
+        switch self {
+        case .unknownError:
+            return NSLocalizedString("Unknown error.", comment: "Application model error")
+        case .fatalError:
+            return NSLocalizedString("Fatal error.", comment: "Application model error")
+        }
+    }
+}
+
 enum RemoteDataFetcherError: Error {
     case unknownError
 }

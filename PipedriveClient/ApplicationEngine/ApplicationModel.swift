@@ -85,7 +85,7 @@ class ApplicationModel {
             return
         }
 
-        // 2. Perform request by network
+        // 2. Perform network request
         remoteDataFetcher.performRequest(using: url) { [weak self] (result) in
             switch result {
             case .success(let data):
