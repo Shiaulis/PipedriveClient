@@ -33,6 +33,7 @@ class PersonsListViewController: UITableViewController {
         setupView()
         setupNavigationBar()
         setupTableView()
+        viewModel.refreshModel()
     }
 
     // MARK: - Table view data source methods
@@ -80,24 +81,28 @@ class PersonsListViewController: UITableViewController {
         }
     }
 
+    private func toggleRefreshControl() {
+        if viewModel.isLoading {
+            tableView.refreshControl?.beginRefreshing()
+        }
+        else {
+            tableView.refreshControl?.endRefreshing()
+        }
+    }
+
     private func setupViewModel() {
         viewModel.showAlertBlock = { [weak self] in
             DispatchQueue.main.async {
                 if let message = self?.viewModel.alertMessage {
-                    self?.showAlert( message )
+                    self?.toggleRefreshControl()
+                    self?.showAlert(with: message)
                 }
             }
         }
 
         viewModel.updateLoadingStatus = { [weak self] in
             DispatchQueue.main.async {
-                let isLoading = self?.viewModel.isLoading ?? false
-                if isLoading {
-                    self?.tableView.refreshControl?.beginRefreshing()
-                }
-                else {
-                    self?.tableView.refreshControl?.endRefreshing()
-                }
+                self?.toggleRefreshControl()
             }
         }
 
