@@ -54,7 +54,6 @@ class CacheStorage {
     
     // MARK: - Public methods -
     
-    
     func readData(forCategory category: CacheCategory, completionHandler:(CacheReadResult) -> Void) {
         if let dataFromRuntimeCache = dataFromRuntimeCache(for: .allPersons) {
             completionHandler(.success(dataFromRuntimeCache))
@@ -65,7 +64,7 @@ class CacheStorage {
             completionHandler(.failure(CacheStorageError.cacheDataDoesntExist))
             return
         }
-        
+
         readDataFromPersistentCache(for: category) { (cacheReadResult) in
             switch cacheReadResult {
             case .success(let data):

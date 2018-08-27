@@ -34,11 +34,12 @@ class ApplicationModel {
     // MARK: - Initialization -
 
     init() {
-        self.requestBuilder = RequestBuilder(usingURLScheme: ApplicationModel.urlScheme,
-                                             companyName: ApplicationModel.companyName,
-                                             apiVersion: ApplicationModel.apiVersion,
-                                             token: ApplicationModel.token)
-        self.remoteDataFetcher = RemoteDataFetcher(using: DispatchQueue.global(qos: .userInteractive),
+        let parameters = RequestParameters(urlScheme: ApplicationModel.urlScheme,
+                                           companyName: ApplicationModel.companyName,
+                                           apiVersion: ApplicationModel.apiVersion,
+                                           token: ApplicationModel.token)
+        self.requestBuilder = RequestBuilder(using: parameters)
+        self.remoteDataFetcher = RemoteDataFetcher(using: .global(qos: .userInteractive),
                                                    networkProvider: URLSessionBasedNetworkProvider())
         self.dataMapper = DataMapper(queue: .global(qos: .userInteractive))
 
@@ -77,7 +78,7 @@ class ApplicationModel {
 
     private func requestAppPersonsList(completionHandler:@escaping (DataProviderUpdateModelResult) -> Void) {
         // 1. Create request URL
-        guard let url = requestBuilder?.createURL(for: .person) else {
+        guard let url = requestBuilder?.createURL(for: .persons) else {
             os_log("Failed to create url for all persons list request", log: ApplicationModel.logger, type: .error)
             assertionFailure()
             completionHandler(.failure(ApplicationModelError.fatalError))

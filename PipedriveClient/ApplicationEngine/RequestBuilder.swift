@@ -8,6 +8,13 @@
 
 import Foundation
 
+struct RequestParameters {
+    let urlScheme: String
+    let companyName: String
+    let apiVersion: String
+    let token: String
+}
+
 class RequestBuilder {
     
     // MARK: - Properties -
@@ -17,18 +24,18 @@ class RequestBuilder {
     
     // MARK: - Initializaion -
     
-    init?(usingURLScheme urlScheme: String, companyName: String, apiVersion: String, token: String) {
+    init?(using parameters: RequestParameters) {
         var urlComponents = URLComponents()
-        urlComponents.scheme = urlScheme
-        urlComponents.host = "\(companyName).pipedrive.com"
-        urlComponents.path = "/\(apiVersion)"
+        urlComponents.scheme = parameters.urlScheme
+        urlComponents.host = "\(parameters.companyName).pipedrive.com"
+        urlComponents.path = "/\(parameters.apiVersion)"
         
         guard let url = urlComponents.url else {
             assertionFailure()
             return nil
         }
         self.baseURL = url
-        self.apiTokenQueryItem = URLQueryItem(name: "api_token", value: token)
+        self.apiTokenQueryItem = URLQueryItem(name: "api_token", value: parameters.token)
     }
     
     // MARK: - Public methods -
@@ -57,11 +64,11 @@ class RequestBuilder {
 
 enum Endpoint {
     static private let apiVersion = "v1"
-    case person
+    case persons
     
     var path: String {
         switch self {
-        case .person: return "/\(Endpoint.apiVersion)/persons"
+        case .persons: return "/\(Endpoint.apiVersion)/persons"
         }
     }
 }
