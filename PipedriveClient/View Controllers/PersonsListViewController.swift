@@ -72,7 +72,7 @@ class PersonsListViewController: UITableViewController {
     // MARK: - Private methods -
 
     private func presentPlaceholderViewIfNeeded() {
-        let shouldPresentPlaceholder = viewModel.shouldPresentPlaceholder ?? false
+        let shouldPresentPlaceholder = viewModel.shouldPresentPlaceholder
         if shouldPresentPlaceholder {
             tableView.backgroundView = PlaceholderView()
         }
@@ -148,9 +148,11 @@ class PersonsListViewController: UITableViewController {
 
     // MARK: -
 
-    private func showAlert( _ message: String ) {
-        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        alert.addAction( UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+    private func showAlert(with message: String) {
+        let alert = UIAlertController(title: NSLocalizedString("Alert", comment: "Alert title"),
+                                      message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }
