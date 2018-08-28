@@ -152,7 +152,11 @@ class PersonsListViewController: UITableViewController {
         let alert = UIAlertController(title: NSLocalizedString("Alert", comment: "Alert title"),
                                       message: message,
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Alert OK button"),
+                                      style: .cancel,
+                                      handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }
+
+
