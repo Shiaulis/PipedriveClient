@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Initialization -
     
     override init() {
-        self.window = UIWindow()
+        self.window = UIWindow(frame: UIScreen.main.bounds)
         self.applicationModel = ApplicationModel()
     }
     
