@@ -35,7 +35,6 @@
 		09E1F32E212937240049988C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E1F32D212937240049988C /* Assets.xcassets */; };
 		09E1F331212937240049988C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E1F32F212937240049988C /* LaunchScreen.storyboard */; };
 		09E1F33C212937240049988C /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F33B212937240049988C /* RequestBuilderTests.swift */; };
-		09E1F347212937240049988C /* PipedriveClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F346212937240049988C /* PipedriveClientUITests.swift */; };
 		09E1F355212962700049988C /* ApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F354212962700049988C /* ApplicationModel.swift */; };
 		09E1F36021298E380049988C /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F35F21298E380049988C /* Errors.swift */; };
 		09E1F362212991FF0049988C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1F361212991FF0049988C /* Extensions.swift */; };
@@ -91,8 +90,6 @@
 		09E1F33B212937240049988C /* RequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTests.swift; sourceTree = "<group>"; };
 		09E1F33D212937240049988C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E1F342212937240049988C /* PipedriveClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PipedriveClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09E1F346212937240049988C /* PipedriveClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipedriveClientUITests.swift; sourceTree = "<group>"; };
-		09E1F348212937240049988C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E1F354212962700049988C /* ApplicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationModel.swift; sourceTree = "<group>"; };
 		09E1F35F21298E380049988C /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		09E1F361212991FF0049988C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -212,7 +209,6 @@
 			children = (
 				09E1F322212937230049988C /* PipedriveClient */,
 				09E1F33A212937240049988C /* PipedriveClientTests */,
-				09E1F345212937240049988C /* PipedriveClientUITests */,
 				09E1F321212937230049988C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -250,15 +246,6 @@
 				09E1F33D212937240049988C /* Info.plist */,
 			);
 			path = PipedriveClientTests;
-			sourceTree = "<group>";
-		};
-		09E1F345212937240049988C /* PipedriveClientUITests */ = {
-			isa = PBXGroup;
-			children = (
-				09E1F346212937240049988C /* PipedriveClientUITests.swift */,
-				09E1F348212937240049988C /* Info.plist */,
-			);
-			path = PipedriveClientUITests;
 			sourceTree = "<group>";
 		};
 		09E1F35621297E8D0049988C /* ModelControllers */ = {
@@ -443,7 +430,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E1F347212937240049988C /* PipedriveClientUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
