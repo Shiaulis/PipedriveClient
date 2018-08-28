@@ -13,7 +13,7 @@ import Foundation
 // https://www.swiftbysundell.com/posts/model-controllers-in-swift
 
 /**
- Person Model Controller encapsulates or data that are needed from 'person' entity
+ Person Model Controller encapsulates  the data that are needed from 'person' entity
  */
 class PersonModelContoller {
 

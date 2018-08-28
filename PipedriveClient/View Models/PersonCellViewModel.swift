@@ -11,6 +11,7 @@ import Foundation
 struct PersonCellViewModel {
 
     // MARK: - Properties -
+    
     var titleLabelText: String {
         return modelController.displayName
     }

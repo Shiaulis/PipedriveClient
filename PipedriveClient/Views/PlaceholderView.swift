@@ -36,4 +36,3 @@ class PlaceholderView: UILabel {
         textColor = UIColor.lightGray
     }
 }
-

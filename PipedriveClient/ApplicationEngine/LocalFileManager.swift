@@ -23,7 +23,6 @@ protocol LocalFileManager {
  Implementation LocalFileManager protocol
  using Foundation File Manager
  */
-
 class SystemLocalFileManager: LocalFileManager {
 
     // MARK: - Properties -
