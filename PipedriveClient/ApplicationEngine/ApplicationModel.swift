@@ -18,8 +18,8 @@ class ApplicationModel {
     // ======================================================================
     // To check app in your own enviroment just paste
     // below your own companyName and token
-    static private let companyName = "andriusinc"
-    static private let token = "d95b2a784b544f23d9ccb4c3eae9b879c91225c1"
+    static private let companyName = "private41"
+    static private let token = "4f1bc88d1724e8744a27e4392ed0bf6fc3d9d7f5"
     // ======================================================================
 
     static private let logger = OSLog(subsystem: LogSubsystem.applicationModel, object: ApplicationModel.self)
