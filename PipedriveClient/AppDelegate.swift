@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let viewModel = PersonsListViewModel(using: applicationModel)
         let rootViewController = PersonsListViewController(using: viewModel)
         let navigationController = UINavigationController(rootViewController: rootViewController)
+        navigationController.navigationBar.prefersLargeTitles = true
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
 
