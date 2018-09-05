@@ -127,7 +127,13 @@ class ApplicationModel {
         do {
             let personModelControllers = try dataMapper.decodePersons(from: data)
             completionHandler(personModelControllers)
-        } catch {
+        }
+        catch DataMapperError.detectedErrorMessageInsideJson(errorMessage: let errorText) {
+            os_log("Error is detected inside Json file. Error message: '%@'", log: ApplicationModel.logger, type: .error, errorText)
+            assertionFailure()
+            completionHandler(nil)
+        }
+        catch {
             os_log("Failed to parse data. Error: '%@'", log: ApplicationModel.logger, type: .error, error.localizedDescription)
             assertionFailure()
             completionHandler(nil)
