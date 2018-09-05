@@ -30,8 +30,7 @@ class PersonsListViewController: UITableViewController {
 
     override func viewDidLoad() {
         setupViewModel()
-        setupView()
-        setupNavigationBar()
+        title = PersonsListViewController.controllerTitle
         setupTableView()
         viewModel.refreshModel()
     }
@@ -72,8 +71,7 @@ class PersonsListViewController: UITableViewController {
     // MARK: - Private methods -
 
     private func presentPlaceholderViewIfNeeded() {
-        let shouldPresentPlaceholder = viewModel.shouldPresentPlaceholder
-        if shouldPresentPlaceholder {
+        if viewModel.shouldPresentPlaceholder {
             tableView.backgroundView = PlaceholderView()
         }
         else {
@@ -122,14 +120,6 @@ class PersonsListViewController: UITableViewController {
 
     // MARK: Setup views
 
-    private func setupView() {
-        view.backgroundColor = .white
-    }
-
-    private func setupNavigationBar() {
-        navigationItem.title = PersonsListViewController.controllerTitle
-    }
-
     private func setupTableView() {
         tableView.register(PersonTableViewCell.self, forCellReuseIdentifier: PersonsListViewController.cellID)
         let refreshControl = UIRefreshControl()
@@ -157,5 +147,3 @@ class PersonsListViewController: UITableViewController {
         self.present(alert, animated: true, completion: nil)
     }
 }
-
-
