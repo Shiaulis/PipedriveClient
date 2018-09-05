@@ -97,6 +97,8 @@ class PersonDetailsViewController: UIViewController {
         setupNavigationBar()
     }
 
+    // MARK: - Private methods -
+
     private func setupNavigationBar() {
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.title = viewModel.personNameLabelText

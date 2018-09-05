@@ -22,10 +22,8 @@ class PlaceholderView: UILabel {
         setupView()
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
+    required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    
     // MARK: - Private methods -
 
     private func setupView() {
