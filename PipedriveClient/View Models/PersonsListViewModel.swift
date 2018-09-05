@@ -53,6 +53,7 @@ class PersonsListViewModel {
     // MARK: - Public methods -
 
     func refreshModel() {
+        isLoading = true
         dataProvider.updatePersonsModelsFromRemoteServer { (refreshModelResult) in
             self.isLoading = false
             switch refreshModelResult {
