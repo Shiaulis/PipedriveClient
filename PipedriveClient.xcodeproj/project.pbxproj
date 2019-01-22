@@ -48,13 +48,6 @@
 			remoteGlobalIDString = 09E1F31F212937230049988C;
 			remoteInfo = PipedriveClient;
 		};
-		09E1F343212937240049988C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09E1F318212937230049988C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 09E1F31F212937230049988C;
-			remoteInfo = PipedriveClient;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -89,7 +82,6 @@
 		09E1F337212937240049988C /* PipedriveClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PipedriveClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E1F33B212937240049988C /* RequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTests.swift; sourceTree = "<group>"; };
 		09E1F33D212937240049988C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09E1F342212937240049988C /* PipedriveClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PipedriveClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E1F354212962700049988C /* ApplicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationModel.swift; sourceTree = "<group>"; };
 		09E1F35F21298E380049988C /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		09E1F361212991FF0049988C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -104,13 +96,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		09E1F334212937240049988C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09E1F33F212937240049988C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -218,7 +203,6 @@
 			children = (
 				09E1F320212937230049988C /* PipedriveClient.app */,
 				09E1F337212937240049988C /* PipedriveClientTests.xctest */,
-				09E1F342212937240049988C /* PipedriveClientUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,24 +279,6 @@
 			productReference = 09E1F337212937240049988C /* PipedriveClientTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		09E1F341212937240049988C /* PipedriveClientUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 09E1F351212937240049988C /* Build configuration list for PBXNativeTarget "PipedriveClientUITests" */;
-			buildPhases = (
-				09E1F33E212937240049988C /* Sources */,
-				09E1F33F212937240049988C /* Frameworks */,
-				09E1F340212937240049988C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				09E1F344212937240049988C /* PBXTargetDependency */,
-			);
-			name = PipedriveClientUITests;
-			productName = PipedriveClientUITests;
-			productReference = 09E1F342212937240049988C /* PipedriveClientUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -327,10 +293,6 @@
 						CreatedOnToolsVersion = 9.4.1;
 					};
 					09E1F336212937240049988C = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = 09E1F31F212937230049988C;
-					};
-					09E1F341212937240049988C = {
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = 09E1F31F212937230049988C;
 					};
@@ -351,7 +313,6 @@
 			targets = (
 				09E1F31F212937230049988C /* PipedriveClient */,
 				09E1F336212937240049988C /* PipedriveClientTests */,
-				09E1F341212937240049988C /* PipedriveClientUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -367,13 +328,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		09E1F335212937240049988C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09E1F340212937240049988C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,13 +380,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09E1F33E212937240049988C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -440,11 +387,6 @@
 			isa = PBXTargetDependency;
 			target = 09E1F31F212937230049988C /* PipedriveClient */;
 			targetProxy = 09E1F338212937240049988C /* PBXContainerItemProxy */;
-		};
-		09E1F344212937240049988C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 09E1F31F212937230049988C /* PipedriveClient */;
-			targetProxy = 09E1F343212937240049988C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -511,12 +453,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -565,11 +508,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -652,46 +596,6 @@
 			};
 			name = Release;
 		};
-		09E1F352212937240049988C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NFA8F38A32;
-				INFOPLIST_FILE = PipedriveClientUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shiaulis.PipedriveClientUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PipedriveClient;
-			};
-			name = Debug;
-		};
-		09E1F353212937240049988C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NFA8F38A32;
-				INFOPLIST_FILE = PipedriveClientUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shiaulis.PipedriveClientUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PipedriveClient;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -718,15 +622,6 @@
 			buildConfigurations = (
 				09E1F34F212937240049988C /* Debug */,
 				09E1F350212937240049988C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		09E1F351212937240049988C /* Build configuration list for PBXNativeTarget "PipedriveClientUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				09E1F352212937240049988C /* Debug */,
-				09E1F353212937240049988C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

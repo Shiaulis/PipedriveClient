@@ -18,8 +18,8 @@ class ApplicationModel {
     // ======================================================================
     // To check app in your own enviroment just paste
     // below your own companyName and token
-    static private let companyName = "private41"
-    static private let token = "4f1bc88d1724e8744a27e4392ed0bf6fc3d9d7f5"
+    static private let companyName = "pipedrive"
+    static private let token = "bc6351f7afcace73dca83cacd8fb21f57104b609"
     // ======================================================================
 
     static private let logger = OSLog(subsystem: LogSubsystem.applicationModel, object: ApplicationModel.self)
